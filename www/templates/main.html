@@ -1,0 +1,86 @@
+<ion-view style="" title="Luxe" hide-back-button="true" >
+ <ion-nav-buttons side="right"> <!-- right -->
+       <a href="#/mi_perfil" class="button button-icon icon ion-person"></a>
+ </ion-nav-buttons>
+ <ion-nav-buttons side="left"> <!-- right -->
+       <a href="#/findCategories" class="button button-icon icon ion-search"></a>
+ </ion-nav-buttons>
+    <ion-content scroll="false" data-tap-disabled="true">
+        <ui-gmap-google-map center='map.center' zoom='map.zoom' options="map.options">
+            <ui-gmap-markers models="randomMarkers" coords="'self'" click="onClick">
+                <ui-gmap-windows show="'show'">
+                    <div ng-non-bindable class="window">
+                       <p class="titlewindow">{{categorie}}</p><p class="descriptionwindow">
+                        {{description}}</p>
+                        <img class="imagewindow" src="{{image}}"/>
+                    </div>
+                </ui-gmap-windows>
+            </ui-gmap-markers>
+        </ui-gmap-google-map>
+    </ion-content>
+    <tab-slide-box tabs-position="bottom" style="position: absolute; bottom: -14px; width: 100%">
+                    <div class="tsb-icons tabs-icon-top">
+                        <div class="tsb-ic-wrp">
+                        <ion-scroll direction="x" class="tsb-hscroll">
+                            <a href="#/detax" class="tab-item"> <i class="icon ion-more"></i>Taxes</a>
+                            <a href="#/remonte" class="tab-item"> <i class="icon ion-bag"></i>Pick up</a>
+                            <a href="#/wallet" class="tab-item"> <i class="icon ion-card"></i>Wallet</a>
+                            <a href="#/luxusAdvisor" class="tab-item"> <i class="icon ion-lightbulb"></i>Luxury Advisor</a>
+                            <a href="#/photo" class="tab-item"> <i class="icon ion-camera"></i>Photo</a>
+                            <a href="#/chats" class="tab-item"> <i class="icon ion-chatbubble"></i>Chats</a>
+                            <a href="#/news" class="tab-item"> <i class="icon ion-calendar"></i>News</a>
+                            <a href="#/ping" class="tab-item"> <i class="icon ion-alert"></i>Ping</a>
+                            <a href="#/declare" class="tab-item"> <i class="icon ion-social-usd"></i>Declare</a>
+                            <a href="#/contacts" class="tab-item"> <i class="icon ion-ios-telephone"></i>Contacts</a>
+                            <a href="#/favorites" class="tab-item"> <i class="icon ion-star"></i>Favorites</a>
+                            <a href="#/asianLuxury" class="tab-item"> <i class="icon ion-social-yen"></i>Asian Games</a>
+                            <a href="#/sellOut" class="tab-item"> <i class="icon ion-cash"></i>Sell Out</a>
+                        </ion-scroll>
+                        </div>
+                    </div>
+                    <ion-slide-box show-pager="false" on-slide-changed="slideHasChanged($index)">
+                        <ion-slide>
+                            <h1>Taxes</h1>
+                        </ion-slide>
+                        <ion-slide>
+                            <h1>Pick up</h1>
+                        </ion-slide>
+                        <ion-slide>
+                            <h1>Wallet</h1>
+                        </ion-slide>
+                        <ion-slide>
+                            <h1>Luxury advisor</h1>
+                        </ion-slide>
+                        <ion-slide>
+                            <h1>Photo</h1>
+                        </ion-slide>
+                        <ion-slide>
+                            <h1>Chats</h1>
+                        </ion-slide>
+                        <ion-slide>
+                            <h1>News</h1>
+                        </ion-slide>
+                         <ion-slide>
+                            <h1>PING</h1>
+                        </ion-slide>
+                        <!--<ion-slide>
+                            <h1>Location</h1>
+                        </ion-slide>-->
+                        <ion-slide>
+                            <h1>Declare</h1>
+                        </ion-slide>
+                        <ion-slide>
+                            <h1>Contacts</h1>
+                        </ion-slide>
+                        <ion-slide>
+                            <h1>Favorites</h1>
+                        </ion-slide>
+                        <ion-slide>
+                            <h1>Asian Luxury</h1>
+                        </ion-slide>
+                        <ion-slide>
+                            <h1>Sell out</h1>
+                        </ion-slide>
+                    </ion-slide-box>
+        </tab-slide-box>
+</ion-view>

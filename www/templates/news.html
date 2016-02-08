@@ -1,0 +1,12 @@
+<ion-view style="" title="News">
+    <ion-content >
+        <!-- our list and list items -->
+        <ion-list ng-repeat="store in stores">
+            <a class="item-news" href="#/newsDetail/{{store.id}}">
+                <img ng-src="{{store.images.url1}}" class="img-city" />
+                <div class="bakcground-text"></div>
+                <h2 class="text-image news">{{store.title}}</h2>
+            </a>
+        </ion-list>
+    </ion-content>
+</ion-view>

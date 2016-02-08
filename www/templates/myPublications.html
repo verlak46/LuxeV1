@@ -1,0 +1,18 @@
+<ion-view style="" title="My Publications">
+   
+       <ion-content>
+    <ion-list>
+
+            <div class="list card" ng-repeat="datos in publications">
+                <a class=" item item-thumbnail-right" href="#/mypublications/{{datos.id}}">
+                    <img ng-src="{{datos.images.url1}}">
+                    <h2>{{datos.title}}</h2>
+                    <p>{{datos.description}}</p>
+                    <p><b>Price:</b> {{datos.price}} €</p>
+                    <i class="icon-left ion-document-text"></i>
+                </a>
+            </div>
+             </ion-list>
+        </ion-content>
+   
+</ion-view>

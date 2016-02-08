@@ -1,0 +1,26 @@
+<ion-view style="" title="Reference and Size">
+    <ion-content padding="true">
+        <div class="card">
+            <div class="item item-icon-left">
+                <i class="ion-bookmark"></i> CATEGORY: {{categories[categoryNumber].name}}
+            </div>
+            <div class="item item-icon-left">
+                <i class="ion-stats-bars"></i> BRAND: {{brand}}
+            </div>
+            <div class="list">
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Reference (Optional)</span>
+                    <input type="text" placeholder="">
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Size (Optional)</span>
+                    <input type="text" placeholder="">
+                </label>
+                
+                </ion-list>
+                
+            </div>
+        </div>
+         <a class="button button-stable button-block" ng-click="agentContact()">Find</a>
+    </ion-content>
+</ion-view>

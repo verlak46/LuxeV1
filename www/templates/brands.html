@@ -1,0 +1,10 @@
+<ion-view style="" title=" {{categories[categoryNumber].name}}">
+    <ion-content padding="true">
+        <ion-list>
+            <ion-item class="item-avatar item-icon-right" type="item-text-wrap" ng-repeat="brand in categories[categoryNumber].brands" ng-click="sizeSelection(brand.brandName)">
+                <img src="img/photo.jpg"> {{brand.brandName}}
+                <i class="icon ion-chevron-right"></i>
+           	</ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

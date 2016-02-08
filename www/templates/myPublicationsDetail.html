@@ -1,0 +1,21 @@
+<ion-view style="" title="My Publications Details ">
+    <ion-content class="has-header" padding="true">
+            <div class="list card">
+                <div class="item item-avatar">
+                    <img ng-src="{{publication.images.url1}}">
+                    <h2>{{publication.title}}</h2>
+                    <p>{{publication.description}}</p>
+                </div>
+                <div class="item item-body">
+                    <img class="full-image" ng-src="{{publication.images.url3}}">
+                    <p>
+                        {{publication.longdescription}}
+                    </p>
+                    <p>
+                        <a href="#" class="subdued">1 Like</a>
+                        <a href="#" class="subdued">5 Comments</a>
+                    </p>
+                </div>
+            </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,17 @@
+<ion-view style="" title="Chats">
+    <ion-content padding="true">
+
+		<ion-list show-delete="shouldShowDelete">
+	      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" type="item-text-wrap" href="#/chats/{{chat.id}}">
+	        <img ng-src="{{chat.face}}">
+	        <h2>{{chat.name}}</h2>
+	        <p>{{chat.lastText}}</p>
+	        <i class="icon ion-chevron-right icon-accessory"></i>
+	        <ion-delete-button class="ion-minus-circled" ng-click="remove(chat)"></ion-delete-button>
+	      </ion-item>
+	    </ion-list>
+	    <ion-toggle ng-model="shouldShowDelete">
+            Remove
+        </ion-toggle>
+	</ion-content>
+</ion-view>

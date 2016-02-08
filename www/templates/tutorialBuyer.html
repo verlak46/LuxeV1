@@ -1,0 +1,18 @@
+<ion-view style="" title="Tutorial buyer">
+    <ion-slide-box on-slide-changed="slideChanged(index)">
+            <ion-slide ng-repeat="slide in selector">
+                <!--TYPE CONTAINER-->
+                <div class="type-container">
+                    <h3>{{slide.text}}</h3>
+                </br> </br> </br>
+            <a class="button button-block button-stabled" href="#/main" ng-if="slide.id==1">
+                Skip intro
+            </a>
+            <a class="button  button-block button-stabled" href="#/main" ng-if="slide.id==4">
+                Next
+            </a>
+            </div>
+            </ion-slide>
+    </ion-slide-box>
+
+</ion-view>

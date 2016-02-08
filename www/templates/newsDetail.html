@@ -1,0 +1,27 @@
+<ion-view style="" title="Stores Details">
+    <ion-content overflow-scroll="false" has-bouncing="false">
+        <ion-list>
+            <div class="list card">
+                <div class="item item-avatar">
+                    <img ng-src="{{store.images.url2}}">
+                    <h2>{{store.title}}</h2>
+                    <p>{{store.description}}</p>
+                </div>
+                <div class="item item-body">
+                    <ion-slide-box on-slide-changed="slideChanged(index)">
+                        <ion-slide class="small" ng-repeat="slide in store.images">
+                            <img class="full-image imagen-slide-small" ng-src="{{slide}}">
+                        </ion-slide>
+                </div>
+                </ion-slide-box>
+                <div class="text-desc">{{store.longdescription}}
+                    <p></p>
+                    <p>
+                        <a href="#" class="subdued">1 Like</a>
+                        <a href="#" class="subdued">5 Comments</a>
+                    </p>
+                    <div>
+                    </div>
+        </ion-list>
+    </ion-content>
+</ion-view>
