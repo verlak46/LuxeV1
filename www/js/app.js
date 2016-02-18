@@ -23,5 +23,7 @@ angular.module('app', ['ionic', 'ngCordova', 'uiGmapgoogle-maps', 'tabSlideBox',
 
     // Align view-title
     $ionicConfigProvider.navBar.alignTitle('center');
+    // Set custom text to back button
+    $ionicConfigProvider.backButton.previousTitleText(false).text('');
 });
 
