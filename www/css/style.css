@@ -114,3 +114,8 @@
 .gm-style div div div div div {
     border-radius: 6px !important;
 }
+
+.title-image {
+    margin-top: 8px;
+    height: 27px;
+}

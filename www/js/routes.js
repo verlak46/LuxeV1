@@ -92,9 +92,6 @@ angular.module('app.routes', []).config(function($stateProvider, $urlRouterProvi
     }).state('detax', {
         url: '/detax',
         templateUrl: 'templates/detax.html'
-    }).state('remonte', {
-        url: '/remonte',
-        templateUrl: 'templates/remonte.html'
     }).state('wallet', {
         url: '/wallet',
         templateUrl: 'templates/wallet.html'
@@ -128,9 +125,6 @@ angular.module('app.routes', []).config(function($stateProvider, $urlRouterProvi
     }).state('contacts', {
         url: '/contacts',
         templateUrl: 'templates/contacts.html'
-    }).state('asianLuxury', {
-        url: '/asianLuxury',
-        templateUrl: 'templates/asianLuxury.html'
     }).state('sellOut', {
         url: '/sellOut',
         templateUrl: 'templates/sellOut.html'
