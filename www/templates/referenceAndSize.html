@@ -1,8 +1,11 @@
-<ion-view style="" title="Reference and Size">
+<ion-view style="" title="Details">
+    <ion-nav-buttons side="right"> <!-- right -->
+       <a href="" class="button button-icon icon ion-navicon"></a>
+    </ion-nav-buttons>
     <ion-content padding="true">
         <div class="card">
             <div class="item item-icon-left">
-                <i class="ion-bookmark"></i> CATEGORY: {{categories[categoryNumber].name}}
+                <i class="ion-bookmark"></i> SECTOR: {{categories[categoryNumber].name}}
             </div>
             <div class="item item-icon-left">
                 <i class="ion-stats-bars"></i> BRAND: {{brand}}
@@ -16,11 +19,19 @@
                     <span class="input-label">Size (Optional)</span>
                     <input type="text" placeholder="">
                 </label>
-                
-                </ion-list>
-                
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Budget</span>
+                    <input type="number" placeholder="€">
+                </label>
             </div>
         </div>
+        <ion-list>
+                    <ion-radio ng-repeat="item in items"
+                       ng-value="item.value"
+                       ng-model="data.item">
+                    {{ item.text }}
+                    </ion-radio>
+                </ion-list>
          <a class="button button-stable button-block" ng-click="agentContact()">Find</a>
     </ion-content>
 </ion-view>

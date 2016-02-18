@@ -219,6 +219,15 @@ angular.module('app.controllers', [])
     $scope.brand = DataFactory.getBrand();
     $scope.categoryNumber = DataFactory.getCategoryNumber();
 
+    $scope.items = [
+    { text: "New", value: "nw" },
+    { text: "Second hand", value: "sh" }
+    ];
+
+    $scope.data = {
+    item: 'nw'
+    };
+
     $scope.agentContact = function() {
         var myPopup = $ionicPopup.show({
 
