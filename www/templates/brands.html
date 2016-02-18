@@ -1,4 +1,7 @@
-<ion-view style="" title=" {{categories[categoryNumber].name}}">
+<ion-view style="" title="Brand">
+	<ion-nav-buttons side="right"> <!-- right -->
+       <a href="" class="button button-icon icon ion-navicon"></a>
+    </ion-nav-buttons>
     <ion-content padding="true">
         <ion-list>
             <ion-item class="item-avatar item-icon-right" type="item-text-wrap" ng-repeat="brand in categories[categoryNumber].brands" ng-click="sizeSelection(brand.brandName)">
