@@ -1,15 +1,30 @@
-<ion-view style="" title="Declare">
+<ion-view style="" title="Buying declaration">
+    <ion-nav-buttons side="right"> <!-- right -->
+       <a href="" class="button button-icon icon ion-navicon"></a>
+    </ion-nav-buttons>
     <ion-content padding="true">
         <div class="list list-inset">
           <label class="item item-input">
-            <input type="text" placeholder="Product sold">
+            <input type="text" placeholder="Sector">
+          </label>
+          <label class="item item-input">
+            <input type="text" placeholder="Brand">
+          </label>
+          <label class="item item-input">
+            <input type="text" placeholder="Product reference bought">
           </label>
           <label class="item item-input">
            <textarea placeholder="Comments"></textarea>
           </label>
+          <label class="item item-input">
+            <input type="text" placeholder="Price">
+          </label>
+          <label class="item item-input">
+            <input type="text" placeholder="Seller name">
+          </label>
           <label class="item item-input item-select">
             <div class="input-label">
-              Qualify buyer
+              Qualify seller
             </div>
             <select>
               <option>1</option>
@@ -26,7 +41,7 @@
           </label>
         </div>
         <div class="list">
-        Notify buyer (Optional)
+        Notify seller (Optional)
           <div class="item item-input-inset">
             <label class="item-input-wrapper">
               <input type="text" placeholder="Email">
