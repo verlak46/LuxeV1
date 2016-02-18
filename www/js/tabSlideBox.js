@@ -1,7 +1,9 @@
 /*
  * SimplePubSub from https://github.com/mbenford/ngTagsInput/blob/master/src/util.js
  * */
-'use strict';
+(function () {
+   'use strict';
+
 
 function SimplePubSub() {
     var events = {};
@@ -22,7 +24,7 @@ function SimplePubSub() {
             return this;
         }
     };
-};
+}
 
 angular.module('tabSlideBox', [])
 .directive('onFinishRender', function ($timeout) {
@@ -35,11 +37,10 @@ angular.module('tabSlideBox', [])
                 });
             }
         }
-    }
+    };
 })
 .directive('tabSlideBox', [ '$timeout', '$window', '$ionicSlideBoxDelegate', '$ionicScrollDelegate',
 	function($timeout, $window, $ionicSlideBoxDelegate, $ionicScrollDelegate) {
-		'use strict';
 
 		return {
 			restrict : 'A, E, C',
@@ -86,7 +87,7 @@ angular.module('tabSlideBox', [])
 					}
 					
 					//If initial element is 0, set position of the tab to 0th tab 
-					if(initialIndex == 0){
+					if(initialIndex === 0){
 						setPosition(0);
 					}
 					
@@ -117,7 +118,7 @@ angular.module('tabSlideBox', [])
 					var leftStr = (middle  - (curElLeft) -  curElWidth/2 + 5);
 					//If tabs are not scrollable
 					if(!scrollDiv){
-						var leftStr = (middle  - (curElLeft) -  curElWidth/2 + 5) + "px";
+						var leftStr = (middle  - (curElLeft) -  curElWidth/2 + 5) + "px"; // jshint ignore:line
 						wrap.style.webkitTransform =  "translate3d("+leftStr+",0,0)" ;
 					}else{
 						//If scrollable tabs
@@ -135,7 +136,7 @@ angular.module('tabSlideBox', [])
 						}
 					}
 					}
-				};
+				}
 				function getX(matrix) {
 					matrix = matrix.replace("translate3d(","");
 					matrix = matrix.replace("translate(","");
@@ -156,7 +157,7 @@ angular.module('tabSlideBox', [])
 				
 				$scope.slideHasChanged = function(index){
 					$scope.events.trigger("slideChange", {"index" : index});
-					$timeout(function(){if($scope.onSlideMove) $scope.onSlideMove({"index" : eval(index)});},100);
+					$timeout(function(){if($scope.onSlideMove) $scope.onSlideMove({"index" : eval(index)});},100); // jshint ignore:line
 				};
 				
 				$scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) {
@@ -167,3 +168,5 @@ angular.module('tabSlideBox', [])
 
 	} 
 ]);
+}());
+
