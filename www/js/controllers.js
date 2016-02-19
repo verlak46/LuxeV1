@@ -59,6 +59,33 @@ angular.module('app.controllers', [])
         duration: 2000
     });
 
+    // Popover links
+
+    $scope.goDeclare = function() {
+        $state.go("declare");
+        $scope.popover.hide();
+    };
+
+    $scope.goPing = function() {
+        $state.go("ping");
+        $scope.popover.hide();
+    };
+
+    $scope.goPayment = function() {
+        $state.go("wallet");
+        $scope.popover.hide();
+    };
+
+    $scope.goDetax = function() {
+        $state.go("detax");
+        $scope.popover.hide();
+    };
+
+    $scope.goFavorites = function() {
+        $state.go("favorites");
+        $scope.popover.hide();
+    };
+
     $scope.goMyProfile = function() {
         $state.go("myProfile");
         $scope.popover.hide();

@@ -123,10 +123,10 @@
 /* Popover */
 
 .popover-menu {
-    height: 120px;
+    height: 400px;
     background-color: #222 !important;
     opacity: 0.9 !important;
-    width: 160px;
+    /*width: 160px;*/
 }
 
 .popover-arrow::after {
