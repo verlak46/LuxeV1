@@ -9,7 +9,10 @@
        <button class="button button-icon ion-navicon" ng-click="popover.show($event)">
         </button>
  </ion-nav-buttons>
-    <ion-content scroll="false" data-tap-disabled="true">
+ <div class="bar bar-subheader">
+  <h2 class="title">Seller locator</h2>
+ </div
+    <ion-content has-subheader="true" scroll="false" data-tap-disabled="true">
         <ui-gmap-google-map center='map.center' zoom='map.zoom' options="map.options">
             <ui-gmap-markers models="randomMarkers" coords="'self'" click="onClick">
                 <ui-gmap-windows show="'show'">

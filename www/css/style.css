@@ -120,6 +120,34 @@
     height: 27px;
 }
 
+/* Popover */
+
 .popover-menu {
     height: 120px;
+    background-color: #222 !important;
+    opacity: 0.9 !important;
+    width: 160px;
+}
+
+.popover-arrow::after {
+    background-color: #222 !important;
+    opacity: 0.9;
+}
+
+.dark-item {
+  background-color: transparent !important;
+  color: #fff !important;
+  border-color: #444 !important;
+}
+.close-icon:before {
+  font-size: 40px !important;
+}
+.bar-clear {
+  background: none;
+}
+.overlay-spacer {
+  height: 100px;
+}
+.content-flush {
+  top: 0px !important;
 }
