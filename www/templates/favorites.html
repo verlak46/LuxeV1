@@ -1,12 +1,12 @@
 <ion-view style="" title="Favourites">
     <ion-content padding="true">
         <ion-list>
-            <div class="card" ng-repeat="fav in favorites">
-                <a class=" item item-thumbnail-left" href="#/favorites/{{fav.id}}">
+            <div class="card">
+                <a ng-repeat="fav in favorites"class=" item item-thumbnail-left" href="#/favorites/{{fav.id}}">
                     <img ng-src="{{fav.images.url2}}">
                     <h2>{{fav.title}}</h2>
                     <p>{{fav.description}}</p>
-                    <p><b>Price:</b> {{fav.price}} €</p>
+                    <p>{{fav.price}}</p>
                     <i class="icon-right ion-heart"></i>
                 </a>
             </div>

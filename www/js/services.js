@@ -1314,16 +1314,16 @@ angular.module('app.services', [])
 .factory('FavoriteFactory', function() {
     var favorite = [{
             id: 0,
-            title: 'Ferrari F430 Spider',
+            title: 'Paris Fashion Week',
             category: 'Luxe cars',
-            description: 'Pristine and absolutely gorgeous 2005 Ferrari F430 Berlinetta with just 17571 miles .',
-            longdescription: 'Pristine and absolutely gorgeous 2005 Ferrari F430 Berlinetta with just 17571 miles . Argento Nurburgring(Silver ) on Nero(Black) Leather , it is one of the more desirable color combinations available on an F430. Factory Options are as follows: CALR RED BRAKE CALIPERS 6 CD CHANGER CHUS BATTERY CHARGER USA +PREWIRING DAY1 DAYTONA STYLE SEAT 364018500 NERO 8500 (BLACK) ELEC ELECTRIC SEATS INST INSTRUMENT PANEL 094077934 STRUMENTAZIONE COLORE ROSSO LOGO ',
-            price: '105950',
+            description: 'Paris Fashion Week is a clothing trade show held biannually in Paris',
+            longdescription: 'Paris Fashion Week is a clothing trade show held biannually in Paris, France with spring/summer and autumn/winter events held each year. Dates are determined by the French Fashion Federation. Currently, Fashion Week is held in the Carrousel du Louvre, as well as at various other venues throughout the city. In addition to ready-to-wear shows, there are men\'s and haute couture shows, which are held semiannually for the spring/summer and autumn/winter seasons.',
+            price: '1-8/03/2016',
             direction: 'Direction',
             images: {
-                url1: 'img/favoritos/fer1.jpg',
-                url2: 'img/favoritos/fer2.jpg',
-                url3: 'img/favoritos/fer3.jpg'
+                url1: 'img/favoritos/paris-fashion2.jpg',
+                url2: 'img/favoritos/paris-fashion.jpg',
+                url3: 'img/favoritos/paris-fashion3.jpg'
             }
         }, {
             id: 1,
@@ -1331,7 +1331,7 @@ angular.module('app.services', [])
             category: 'Luxe cars',
             description: 'One of the lowest mileage F430 Spiders available in the US right now.',
             longdescription: 'Straight out of a collection, never tracked. One of the lowest mileage F430 Spiders available in the US right now. No paint work or stories. Challenge Wheels, Power Daytonas with red piping, red contrast stitching on dash,shields, and much more. Completely stock and everything works.',
-            price: '164900',
+            price: 'Price: 164900 €',
             direction: 'Direction',
             images: {
                 url1: 'img/favoritos/fer4301.jpg',
@@ -1340,108 +1340,18 @@ angular.module('app.services', [])
             }
         }, {
             id: 2,
-            title: 'Cessna Citation X',
+            title: 'Josh Venkman',
             category: 'Planes',
-            description: 'Used Plane.',
+            description: 'Used Planes',
             longdescription: 'for more information call 666666665',
             direction: 'Direction',
+            price: 'Paris, France',
             images: {
                 url1: 'img/favoritos/plane1.jpg',
                 url2: 'img/favoritos/plane2.jpg',
                 url3: 'img/favoritos/plane3.jpg'
-            }
-        }, {
-            id: 3,
-            title: 'Bracelet',
-            category: 'jewelry',
-            description: 'Diamonds are forever.',
-            longdescription: 'Beautifully delicate, this stunning bracelet is crafted in luxurious 18ct gold for a polished and traditional finish. Set with dazzling I1 certificated diamonds totalling an overwhelming five carats, this beautiful piece also offers a concealed diamond hidden on the inside as an everlasting symbol of love',
-            price: '6900',
-            direction: 'Direction',
-            images: {
-                url1: 'img/favoritos/bracelet1.png',
-                url2: 'img/favoritos/bracelet2.png',
-                url3: 'img/favoritos/bracelet3.png'
-            }
-        }, {
-            id: 4,
-            title: 'Earrings',
-            category: 'jewelry',
-            description: '18ct white gold 2 carat solitaire earrings',
-            longdescription: 'Styled in elegant 18ct white gold. Set with shimmering 2 carat diamonds. These earrings bring a sophisticated look to every outfit.',
-            price: '5999',
-            direction: 'Direction',
-            images: {
-                url1: 'img/favoritos/earring1.png',
-                url2: 'img/favoritos/earring1.png',
-                url3: 'img/favoritos/earring1.png'
-            }
-        }, {
-            id: 5,
-            title: 'Ferrari F430 Spider',
-            category: 'Luxe cars',
-            description: 'Pristine and absolutely gorgeous 2005 Ferrari F430 Berlinetta with just 17571 miles .',
-            longdescription: 'Pristine and absolutely gorgeous 2005 Ferrari F430 Berlinetta with just 17571 miles . Argento Nurburgring(Silver ) on Nero(Black) Leather , it is one of the more desirable color combinations available on an F430. Factory Options are as follows: CALR RED BRAKE CALIPERS 6 CD CHANGER CHUS BATTERY CHARGER USA +PREWIRING DAY1 DAYTONA STYLE SEAT 364018500 NERO 8500 (BLACK) ELEC ELECTRIC SEATS INST INSTRUMENT PANEL 094077934 STRUMENTAZIONE COLORE ROSSO LOGO ',
-            price: '105950',
-            direction: 'Direction',
-            images: {
-                url1: 'img/favoritos/fer1.jpg',
-                url2: 'img/favoritos/fer2.jpg',
-                url3: 'img/favoritos/fer3.jpg'
-            }
-        }, {
-            id: 6,
-            title: 'Ferrari F430 Berlinetta',
-            category: 'Luxe cars',
-            description: 'One of the lowest mileage F430 Spiders available in the US right now.',
-            longdescription: 'Straight out of a collection, never tracked. One of the lowest mileage F430 Spiders available in the US right now. No paint work or stories. Challenge Wheels, Power Daytonas with red piping, red contrast stitching on dash,shields, and much more. Completely stock and everything works.',
-            price: '164900',
-            direction: 'Direction',
-            images: {
-                url1: 'img/favoritos/fer4301.jpg',
-                url2: 'img/favoritos/fer4302.jpg',
-                url3: 'img/favoritos/fer4302.jpg'
-            }
-        }, {
-            id: 7,
-            title: 'Cessna Citation X',
-            category: 'Planes',
-            description: 'Used Plane.',
-            longdescription: 'for more information call 666666665',
-            direction: 'Direction',
-            images: {
-                url1: 'img/favoritos/plane1.jpg',
-                url2: 'img/favoritos/plane2.jpg',
-                url3: 'img/favoritos/plane3.jpg'
-            }
-        }, {
-            id: 8,
-            title: 'Bracelet',
-            category: 'jewelry',
-            description: 'Diamonds are forever.',
-            longdescription: 'Beautifully delicate, this stunning bracelet is crafted in luxurious 18ct gold for a polished and traditional finish. Set with dazzling I1 certificated diamonds totalling an overwhelming five carats, this beautiful piece also offers a concealed diamond hidden on the inside as an everlasting symbol of love',
-            price: '6900',
-            direction: 'Direction',
-            images: {
-                url1: 'img/favoritos/bracelet1.png',
-                url2: 'img/favoritos/bracelet2.png',
-                url3: 'img/favoritos/bracelet3.png'
-            }
-        }, {
-            id: 9,
-            title: 'Earrings',
-            category: 'jewelry',
-            description: '18ct white gold 2 carat solitaire earrings',
-            longdescription: 'Styled in elegant 18ct white gold. Set with shimmering 2 carat diamonds. These earrings bring a sophisticated look to every outfit.',
-            price: '5999',
-            direction: 'Direction',
-            images: {
-                url1: 'img/favoritos/earring1.png',
-                url2: 'img/favoritos/earring1.png',
-                url3: 'img/favoritos/earring1.png'
             }
         }
-
     ];
 
     return {
