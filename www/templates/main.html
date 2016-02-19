@@ -4,7 +4,7 @@
   <a href="#/findCategories" class="button button-icon icon ion-search"></a>
   <button class="button button-icon ion-navicon" ng-click="popover.show($event)">
  </div>
-    <ion-content scroll="false" data-tap-disabled="true">
+    <ion-content class="has-header has-subheader" scroll="false" data-tap-disabled="true">
         <ui-gmap-google-map center='map.center' zoom='map.zoom' options="map.options">
             <ui-gmap-markers models="randomMarkers" coords="'self'" click="onClick">
                 <ui-gmap-windows show="'show'">
