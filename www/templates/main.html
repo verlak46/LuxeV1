@@ -6,7 +6,8 @@
        <a href="#/findCategories" class="button button-icon icon ion-search"></a>
  </ion-nav-buttons>
  <ion-nav-buttons side="right"> <!-- right -->
-       <a href="#/mi_perfil" class="button button-icon icon ion-navicon"></a>
+       <button class="button button-icon ion-navicon" ng-click="popover.show($event)">
+        </button>
  </ion-nav-buttons>
     <ion-content scroll="false" data-tap-disabled="true">
         <ui-gmap-google-map center='map.center' zoom='map.zoom' options="map.options">

@@ -47,7 +47,7 @@ angular.module('app.controllers', [])
  	};
 })
 
-.controller('mainCtrl', function($scope, $state, $ionicLoading, GetMarksFactory) {
+.controller('mainCtrl', function($scope, $state, $ionicLoading, $ionicPopover, GetMarksFactory) {
 
     // Setup the loader
     $ionicLoading.show({
@@ -57,6 +57,22 @@ angular.module('app.controllers', [])
         maxWidth: 200,
         showDelay: 0,
         duration: 2000
+    });
+
+    $scope.goMyProfile = function() {
+        $state.go("myProfile");
+        $scope.popover.hide();
+    };
+
+    $scope.goSettings = function() {
+        $state.go("parameters");
+        $scope.popover.hide();
+    };
+
+    $ionicPopover.fromTemplateUrl('templates/popover.html', {
+        scope: $scope,
+    }).then(function(popover) {
+        $scope.popover = popover;
     });
 
     // Maps
