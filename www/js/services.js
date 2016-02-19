@@ -1348,7 +1348,7 @@ angular.module('app.services', [])
             price: 'Paris, France',
             images: {
                 url1: 'img/favoritos/plane1.jpg',
-                url2: 'img/favoritos/plane2.jpg',
+                url2: 'img/9FNnFPDaTbaO1ayDqTPD_mike.png',
                 url3: 'img/favoritos/plane3.jpg'
             }
         }
