@@ -128,6 +128,9 @@ angular.module('app.routes', []).config(function($stateProvider, $urlRouterProvi
     }).state('sellOut', {
         url: '/sellOut',
         templateUrl: 'templates/sellOut.html'
+    }).state('events', {
+        url: '/events',
+        templateUrl: 'templates/events.html'
     }).state('favorites', {
         url: '/favorites',
         templateUrl: 'templates/favorites.html',

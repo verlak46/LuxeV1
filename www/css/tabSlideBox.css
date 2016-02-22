@@ -80,7 +80,7 @@
 	font-size: 0.9em;
 	line-height: 1.6em;
 	text-decoration: none;
-	margin: 0 15px;
+	margin: 0 18px;
 	border-bottom: 3px solid transparent;
 }
 .tabbed-slidebox .tsb-icons .scroll a.active {
@@ -89,8 +89,8 @@
 }
 
 .tabbed-slidebox .tsb-icons .scroll a i{
-    font-size: 3.1em;
+    font-size: 2.9em;
 }
 .tabbed-slidebox .tsb-icons .scroll a.active i{
-    font-size: 3.1em;
+    font-size: 3.0em;
 }
