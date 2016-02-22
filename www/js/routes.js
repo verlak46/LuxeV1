@@ -124,7 +124,8 @@ angular.module('app.routes', []).config(function($stateProvider, $urlRouterProvi
         templateUrl: 'templates/declare.html'
     }).state('contacts', {
         url: '/contacts',
-        templateUrl: 'templates/contacts.html'
+        templateUrl: 'templates/contacts.html',
+        controller: 'ContactsCtrl'
     }).state('sellOut', {
         url: '/sellOut',
         templateUrl: 'templates/sellOut.html'

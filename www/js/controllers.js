@@ -291,10 +291,19 @@ angular.module('app.controllers', [])
     };
 })
 
-.controller('ChatsCtrl', function($scope, $stateParams, Chats) {
+.controller('ChatsCtrl', function($scope, $stateParams, $ionicFilterBar, Chats) {
   $scope.chats = Chats.all();
   $scope.remove = function(chat) {
     Chats.remove(chat);
+  };
+  $scope.filter = function() {
+    $ionicFilterBar.show();
+  };
+})
+
+.controller('ContactsCtrl', function($scope, $ionicFilterBar) {
+  $scope.filter = function() {
+    $ionicFilterBar.show();
   };
 })
 

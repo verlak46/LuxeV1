@@ -1,4 +1,4 @@
-angular.module('app', ['ionic', 'ngCordova', 'uiGmapgoogle-maps', 'tabSlideBox', 'app.controllers', 'app.routes', 'app.services', 'app.directives'])
+angular.module('app', ['ionic', 'ngCordova', 'jett.ionic.filter.bar', 'uiGmapgoogle-maps', 'tabSlideBox', 'app.controllers', 'app.routes', 'app.services', 'app.directives'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
