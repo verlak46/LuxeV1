@@ -487,30 +487,6 @@ angular.module('app.controllers', [])
 .controller('luxusAdvisorCtrl', function($scope) {
 
     $scope.rates = [{
-        name: "Bill Gates",
-        category: "Agent",
-        img: 'img/agent-store/0.jpg'
-    }, {
-        name: "Perry Meison",
-        category: "Agent",
-        img: 'img/agent-store/1.jpg'
-    }, {
-        name: "Pep Guardiola",
-        category: "Agent",
-        img: 'img/agent-store/2.jpg'
-    }, {
-        name: "Ramon Ramires",
-        category: "Agent",
-        img: 'img/agent-store/3.jpg'
-    }, {
-        name: "Diana Hill",
-        category: "Agent",
-        img: 'img/agent-store/4.jpg'
-    }, {
-        name: "Vanessa Williams",
-        category: "Agent",
-        img: 'img/agent-store/5.jpg'
-    }, {
         name: "Louis Vuitton",
         category: "Store",
         img: 'img/agent-store/6.jpg'

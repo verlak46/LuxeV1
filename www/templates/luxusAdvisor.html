@@ -1,7 +1,7 @@
-<ion-view style="" title="Luxury advisor">
+<ion-view style="" title="Store advisor">
     <ion-content>
-        <ion-list  ng-repeat="rate in rates">
-            <a class="item item-thumbnail-left">
+        <ion-list>
+            <a ng-repeat="rate in rates" class="item item-thumbnail-left">
                 <img ng-src="{{rate.img}}">
                 <h2>{{rate.name}}</h2>
                 <p>{{rate.category}}</p>
