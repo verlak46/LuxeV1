@@ -439,6 +439,18 @@ angular.module('app.controllers', [])
         text: "Outlets",
         checked: false,
         img: 'img/markers/3.png'
+    },{
+        text: "Airports",
+        checked: false,
+        img: 'img/markers/0.png'
+    }, {
+        text: "Department stores",
+        checked: false,
+        img: 'img/markers/1.png'
+    }, {
+        text: "Rental",
+        checked: false,
+        img: 'img/markers/2.png'
     }];
 
     $scope.pushNotificationChange = function() {

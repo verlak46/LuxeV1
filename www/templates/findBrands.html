@@ -1,11 +1,13 @@
 <ion-view style="" title="Brands">
-    <ion-content padding="true">
+    <ion-content>
        <ion-list>
-            <ion-item class="item-avatar item-icon-right" type="item-text-wrap" ng-repeat="brand in categories[categoryNumber].brands" ng-click="sizeSelection()">
-                    <img src="img/photo.jpg">
+       <ion-checkbox class="item-checkbox-right" ng-repeat="brand in categories[categoryNumber].brands" ng-model="item.checked" ng-checked="item.checked">
+            <ion-item class="item-avatar" type="item-text-wrap" ng-click="sizeSelection()">
                     {{brand.brandName}}
-                    <i class="icon ion-chevron-right"></i>
-            </div>
+                    <img src="img/photo.jpg">
+       		</ion-item>
+       </ion-checkbox>
         </ion-list>
+        <a class="button button-stable button-block" href="#/filterMarks">Next</a>
     </ion-content>
 </ion-view>

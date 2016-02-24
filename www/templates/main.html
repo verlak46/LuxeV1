@@ -1,10 +1,11 @@
-<ion-view title='<img src="img/luxe.png" />' hide-back-button="true" >
- <div class="bar bar-subheader">
-  <h2 class="title">Seller locator</h2>
-  <a href="#/findCategories" class="button button-icon icon ion-search"></a>
-  <button class="button button-icon ion-navicon" ng-click="popover.show($event)">
- </div>
-    <ion-content class="has-header has-subheader" scroll="false" data-tap-disabled="true">
+<ion-view title='Seller locator' hide-back-button="true" >
+   <ion-nav-buttons side="left">
+    <a href="#/findCategories" class="button button-icon icon"><img src="img/luxe.png"></a>
+   </ion-nav-buttons>
+   <ion-nav-buttons side="right">
+    <button class="button button-icon ion-navicon" ng-click="popover.show($event)"></button>
+   </ion-nav-buttons>
+    <ion-content class="has-header" scroll="false" data-tap-disabled="true">
         <ui-gmap-google-map center='map.center' zoom='map.zoom' options="map.options">
             <ui-gmap-markers models="randomMarkers" coords="'self'" click="onClick">
                 <ui-gmap-windows show="'show'">
