@@ -59,6 +59,23 @@ angular.module('app.controllers', [])
         duration: 2000
     });
 
+    // Ratings
+    $scope.ratingsObject = {
+        iconOn : 'ion-ios-star',
+        iconOff : 'ion-ios-star-outline',
+        iconOnColor: 'rgb(200, 200, 100)',
+        iconOffColor:  'rgb(200, 100, 100)',
+        rating:  2,
+        minRating:1,
+        callback: function(rating) {
+          $scope.ratingsCallback(rating);
+        }
+    };
+
+    $scope.ratingsCallback = function(rating) {
+        console.log('Selected rating is : ', rating);
+    };
+
     // set the rate and max variables
     $scope.rating = {};
     $scope.rating.rate = 3;

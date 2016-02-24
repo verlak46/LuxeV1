@@ -139,3 +139,11 @@
   color: #fff !important;
   border-color: #444 !important;
 }
+
+.ionic_ratings .icon {
+  font-size: 27px;
+}
+
+ion-drawer-vertical-wrapper {
+    height: initial !important;
+}
