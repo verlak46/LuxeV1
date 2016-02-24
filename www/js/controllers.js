@@ -59,6 +59,11 @@ angular.module('app.controllers', [])
         duration: 2000
     });
 
+    // set the rate and max variables
+    $scope.rating = {};
+    $scope.rating.rate = 3;
+    $scope.rating.max = 5;
+
     // Popover links
 
     $scope.goDeclare = function() {

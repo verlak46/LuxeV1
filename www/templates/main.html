@@ -1,9 +1,22 @@
 <ion-view title='Seller locator' hide-back-button="true" >
+<ion-drawer-vertical-wrapper class="has-header" direction="down" state="closed">
+    <ion-drawer-vertical-content>
+    <label style="" class="item item-input">
+        <span class="input-label">City</span>
+        <input placeholder="" type="text">
+    </label>
+    <label style="" class="item item-input">
+        <span class="input-label">Rating</span>
+        <input placeholder="" type="text">
+    </label>
+    </ion-drawer-vertical-content>
+    <ion-drawer-vertical-handle />
+</ion-drawer-vertical-wrapper>
    <ion-nav-buttons side="left">
     <a href="#/findCategories" class="button button-icon icon"><img src="img/luxe.png"></a>
    </ion-nav-buttons>
    <ion-nav-buttons side="right">
-    <button class="button button-icon ion-navicon" ng-click="popover.show($event)"></button>
+    <button class="button button-icon ion-more" ng-click="popover.show($event)"></button>
    </ion-nav-buttons>
     <ion-content class="has-header" scroll="false" data-tap-disabled="true">
         <ui-gmap-google-map center='map.center' zoom='map.zoom' options="map.options">
@@ -24,19 +37,23 @@
                         <ion-scroll direction="x" class="tsb-hscroll">
                             <a href="#/luxusAdvisor" class="tab-item"> <img class="icon" src="img/iconcategory/shop.png"></i>Advisor</a>
                             <a href="#/contacts" class="tab-item"> <i class="icon ion-ios-telephone"></i>Contacts</a>
-                            <a href="#/news" class="tab-item"> <i class="icon ion-calendar"></i>News</a>
+                            <a href="#/main" class="tab-item"> <i class="icon ion-person-stalker"></i>Sellers</a>
+                            <a href="#/news" class="tab-item"> <img class="icon" src="img/iconcategory/newspaper5.png"></i>News</a>
                             <a href="#/chats" class="tab-item"> <i class="icon ion-chatbubble"></i>Chats</a>
                             <a href="#/photo" class="tab-item"> <i class="icon ion-camera"></i>Pictures</a>
-                            <a href="#/events" class="tab-item"> <i class="icon ion-person-stalker"></i>Events</a>
+                            <a href="#/events" class="tab-item"> <i class="icon ion-calendar"></i>Events</a>
                         </ion-scroll>
                         </div>
                     </div>
                     <ion-slide-box show-pager="false" on-slide-changed="slideHasChanged($index)">
                         <ion-slide>
-                            <h1>Luxury advisor</h1>
+                            <h1>Advisor</h1>
                         </ion-slide>
                         <ion-slide>
                             <h1>Contacts</h1>
+                        </ion-slide>
+                        <ion-slide>
+                            <h1>Sellers</h1>
                         </ion-slide>
                         <ion-slide>
                             <h1>News</h1>
