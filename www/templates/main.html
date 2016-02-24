@@ -1,10 +1,20 @@
-<ion-view title='Seller locator' hide-back-button="true" >
+<ion-view title='Sellers locator' hide-back-button="true" >
 <ion-drawer-vertical-wrapper class="has-header" direction="down" state="closed">
     <ion-drawer-vertical-content>
-    <label style="" class="item item-input">
-            <span class="input-label">City</span>
-            <input placeholder="" type="text">
-        </label>
+    <label class="item item-input">
+    <i class="icon ion-search placeholder-icon"></i>
+    <input type="text" placeholder="Search">
+  </label>
+    <label class="item item-input item-select">
+    <div class="input-label">
+      City
+    </div>
+    <select>
+      <option>Milan</option>
+      <option selected>Paris</option>
+      <option>France</option>
+    </select>
+  </label>
         <div class="row" style="background-color: white">
           <div class="col"><span class="input-label">Rating</span></div>
           <div class="col"><ionic-ratings ratingsobj='ratingsObject'></ionic-ratings></div>
@@ -13,12 +23,14 @@
     <ion-drawer-vertical-handle />
 </ion-drawer-vertical-wrapper>
    <ion-nav-buttons side="left">
-    <a href="#/findCategories" class="button button-icon icon"><img src="img/luxe.png"></a>
+    <a href="#/findCategories" class="tab-item"><img class="icon ion-home" src="img/iconcategory/diamond.png"></a>
    </ion-nav-buttons>
    <ion-nav-buttons side="right">
-    <button class="button button-icon ion-more" ng-click="popover.show($event)"></button>
+    <button class="button button-icon ion-android-more-vertical" ng-click="popover.show($event)"></button>
    </ion-nav-buttons>
-    <ion-content class="has-header" scroll="false" data-tap-disabled="true">
+    <ion-tabs class="tabs-striped tabs-top tabs-background-stable tabs-color-dark">
+        <ion-tab title="Map">
+            <ion-nav-view name="Map"><ion-content scroll="false" data-tap-disabled="true">
         <ui-gmap-google-map center='map.center' zoom='map.zoom' options="map.options">
             <ui-gmap-markers models="randomMarkers" coords="'self'" click="onClick">
                 <ui-gmap-windows show="'show'">
@@ -30,8 +42,103 @@
                 </ui-gmap-windows>
             </ui-gmap-markers>
         </ui-gmap-google-map>
-    </ion-content>
-    <tab-slide-box tab="2" tabs-position="bottom" style="position: absolute; bottom: -14px; width: 100%">
+    </ion-content><tab-slide-box tab="2" tabs-position="bottom" style="position: absolute; bottom: -14px; width: 100%">
+                    <div class="tsb-icons tabs-icon-top">
+                        <div class="tsb-ic-wrp">
+                        <ion-scroll direction="x" class="tsb-hscroll">
+                            <a href="#/luxusAdvisor" class="tab-item"> <i class="icon ion-bag"></i>Advisor</a>
+                            <a href="#/contacts" class="tab-item"> <i class="icon ion-ios-telephone"></i>Contacts</a>
+                            <a href="#/main" class="tab-item"> <i class="icon ion-person-stalker"></i>Sellers</a>
+                            <a href="#/news" class="tab-item"> <i class="icon ion-social-rss"></i>News</a>
+                            <a href="#/chats" class="tab-item"> <i class="icon ion-chatbubble"></i>Chats</a>
+                            <a href="#/photo" class="tab-item"> <i class="icon ion-camera"></i>Pictures</a>
+                            <a href="#/events" class="tab-item"> <i class="icon ion-calendar"></i>Events</a>
+                        </ion-scroll>
+                        </div>
+                    </div>
+                    <ion-slide-box show-pager="false" on-slide-changed="slideHasChanged($index)">
+                        <ion-slide>
+                            <h1>Advisor</h1>
+                        </ion-slide>
+                        <ion-slide>
+                            <h1>Contacts</h1>
+                        </ion-slide>
+                        <ion-slide>
+                            <h1>Sellers</h1>
+                        </ion-slide>
+                        <ion-slide>
+                            <h1>News</h1>
+                        </ion-slide>
+                        <ion-slide>
+                            <h1>Chat</h1>
+                        </ion-slide>
+                        <ion-slide>
+                            <h1>Pic publisher</h1>
+                        </ion-slide>
+                        <ion-slide>
+                            <h1>Events</h1>
+                        </ion-slide>
+                    </ion-slide-box>
+        </tab-slide-box></ion-nav-view>
+        </ion-tab>
+
+        <ion-tab title="List">
+            <ion-nav-view name="List"> <ion-content>
+       List
+    </ion-content><tab-slide-box tab="2" tabs-position="bottom" style="position: absolute; bottom: -14px; width: 100%">
+                    <div class="tsb-icons tabs-icon-top">
+                        <div class="tsb-ic-wrp">
+                        <ion-scroll direction="x" class="tsb-hscroll">
+                            <a href="#/luxusAdvisor" class="tab-item"> <i class="icon ion-bag"></i>Advisor</a>
+                            <a href="#/contacts" class="tab-item"> <i class="icon ion-ios-telephone"></i>Contacts</a>
+                            <a href="#/main" class="tab-item"> <i class="icon ion-person-stalker"></i>Sellers</a>
+                            <a href="#/news" class="tab-item"> <i class="icon ion-social-rss"></i>News</a>
+                            <a href="#/chats" class="tab-item"> <i class="icon ion-chatbubble"></i>Chats</a>
+                            <a href="#/photo" class="tab-item"> <i class="icon ion-camera"></i>Pictures</a>
+                            <a href="#/events" class="tab-item"> <i class="icon ion-calendar"></i>Events</a>
+                        </ion-scroll>
+                        </div>
+                    </div>
+                    <ion-slide-box show-pager="false" on-slide-changed="slideHasChanged($index)">
+                        <ion-slide>
+                            <h1>Advisor</h1>
+                        </ion-slide>
+                        <ion-slide>
+                            <h1>Contacts</h1>
+                        </ion-slide>
+                        <ion-slide>
+                            <h1>Sellers</h1>
+                        </ion-slide>
+                        <ion-slide>
+                            <h1>News</h1>
+                        </ion-slide>
+                        <ion-slide>
+                            <h1>Chat</h1>
+                        </ion-slide>
+                        <ion-slide>
+                            <h1>Pic publisher</h1>
+                        </ion-slide>
+                        <ion-slide>
+                            <h1>Events</h1>
+                        </ion-slide>
+                    </ion-slide-box>
+        </tab-slide-box></ion-nav-view> 
+        </ion-tab>
+    </ion-tabs>
+    <!--<ion-content class="has-header has-subheader" scroll="false" data-tap-disabled="true">
+        <ui-gmap-google-map center='map.center' zoom='map.zoom' options="map.options">
+            <ui-gmap-markers models="randomMarkers" coords="'self'" click="onClick">
+                <ui-gmap-windows show="'show'">
+                    <div ng-non-bindable class="window">
+                       <p class="titlewindow">{{categorie}}</p><p class="descriptionwindow">
+                        {{description}}</p>
+                        <img class="imagewindow" src="{{image}}"/>
+                    </div>
+                </ui-gmap-windows>
+            </ui-gmap-markers>
+        </ui-gmap-google-map>
+    </ion-content>-->
+    <!--<tab-slide-box tab="2" tabs-position="bottom" style="position: absolute; bottom: -14px; width: 100%">
                     <div class="tsb-icons tabs-icon-top">
                         <div class="tsb-ic-wrp">
                         <ion-scroll direction="x" class="tsb-hscroll">
@@ -68,5 +175,5 @@
                             <h1>Events</h1>
                         </ion-slide>
                     </ion-slide-box>
-        </tab-slide-box>
+        </tab-slide-box>-->
 </ion-view>

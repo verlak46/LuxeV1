@@ -49,6 +49,8 @@ angular.module('app.controllers', [])
 
 .controller('mainCtrl', function($scope, $state, $ionicLoading, $ionicPopover, GetMarksFactory) {
 
+    map = true;
+
     // Setup the loader
     $ionicLoading.show({
         content: 'Cargando...',
@@ -58,6 +60,11 @@ angular.module('app.controllers', [])
         showDelay: 0,
         duration: 2000
     });
+
+    // Change Tab
+    $scope.changeTab = function() {
+        map = !map;
+    };
 
     // Ratings
     $scope.ratingsObject = {
