@@ -1,4 +1,10 @@
 <ion-view style="" title="Brands">
+	<ion-nav-buttons side="right">
+	    <button ng-click="sizeSelection()"
+	            class="button button-clear button-positive">
+	      Done
+	    </button>
+  	</ion-nav-buttons>
     <ion-content>
        <ion-list>
        <ion-checkbox class="item-checkbox-right" ng-repeat="brand in categories[categoryNumber].brands" ng-model="item.checked" ng-checked="item.checked">
@@ -8,6 +14,5 @@
        		</ion-item>
        </ion-checkbox>
         </ion-list>
-        <a class="button button-stable button-block" href="#/filterMarks">Next</a>
     </ion-content>
 </ion-view>
