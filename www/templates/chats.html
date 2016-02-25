@@ -1,7 +1,25 @@
 <ion-view style="" title="Chats">
+<ion-drawer-vertical-wrapper class="has-header" direction="down" state="closed">
+    <ion-drawer-vertical-content>
+    <label class="item item-input item-select">
+    <div class="input-label city">
+      City
+    </div>
+    <select class="city">
+      <option>Milan</option>
+      <option selected>Paris</option>
+      <option>France</option>
+    </select>
+  </label>
+    </ion-drawer-vertical-content>
+    <ion-drawer-vertical-handle />
+</ion-drawer-vertical-wrapper>
 	<ion-nav-buttons side="left"> <!-- left -->
        <button ng-click="filter()" class="button button-icon icon ion-search"></button>
     </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+    <button class="button button-icon ion-navicon" ng-click="popover.show($event)"></button>
+   </ion-nav-buttons>
     <ion-content padding="true">
 
 		<ion-list show-delete="shouldShowDelete">

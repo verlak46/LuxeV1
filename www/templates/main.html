@@ -6,27 +6,26 @@
     <input type="text" placeholder="Search">
   </label>
     <label class="item item-input item-select">
-    <div class="input-label">
+    <div class="input-label city">
       City
     </div>
-    <select>
+    <select class="city">
       <option>Milan</option>
       <option selected>Paris</option>
       <option>France</option>
     </select>
   </label>
         <div class="row" style="background-color: white">
-          <div class="col"><span class="input-label">Rating</span></div>
           <div class="col"><ionic-ratings ratingsobj='ratingsObject'></ionic-ratings></div>
         </div>
     </ion-drawer-vertical-content>
     <ion-drawer-vertical-handle />
 </ion-drawer-vertical-wrapper>
    <ion-nav-buttons side="left">
-    <a href="#/findCategories" class="tab-item"><img class="icon ion-home" src="img/iconcategory/diamond.png"></a>
+    <a href="#/findCategories" class="tab-item"><img class="icon ion-home" src="img/iconcategory/icon_search.png"></a>
    </ion-nav-buttons>
    <ion-nav-buttons side="right">
-    <button class="button button-icon ion-android-more-vertical" ng-click="popover.show($event)"></button>
+    <button class="button button-icon ion-navicon" ng-click="popover.show($event)"></button>
    </ion-nav-buttons>
     <ion-tabs class="tabs-striped tabs-top tabs-background-stable tabs-color-dark">
         <ion-tab title="Map">
@@ -46,10 +45,10 @@
                     <div class="tsb-icons tabs-icon-top">
                         <div class="tsb-ic-wrp">
                         <ion-scroll direction="x" class="tsb-hscroll">
-                            <a href="#/luxusAdvisor" class="tab-item"> <i class="icon ion-bag"></i>Advisor</a>
+                            <a href="#/luxusAdvisor" class="tab-item"> <i class="icon ion-star"></i>Advisor</a>
                             <a href="#/contacts" class="tab-item"> <i class="icon ion-ios-telephone"></i>Contacts</a>
                             <a href="#/main" class="tab-item"> <i class="icon ion-person-stalker"></i>Sellers</a>
-                            <a href="#/news" class="tab-item"> <i class="icon ion-social-rss"></i>News</a>
+                            <a href="#/news" class="tab-item"> <i class="icon ion-android-list"></i>News</a>
                             <a href="#/chats" class="tab-item"> <i class="icon ion-chatbubble"></i>Chats</a>
                             <a href="#/photo" class="tab-item"> <i class="icon ion-camera"></i>Pictures</a>
                             <a href="#/events" class="tab-item"> <i class="icon ion-calendar"></i>Events</a>
@@ -131,10 +130,10 @@
                     <div class="tsb-icons tabs-icon-top">
                         <div class="tsb-ic-wrp">
                         <ion-scroll direction="x" class="tsb-hscroll">
-                            <a href="#/luxusAdvisor" class="tab-item"> <i class="icon ion-bag"></i>Advisor</a>
+                            <a href="#/luxusAdvisor" class="tab-item"> <i class="icon ion-star"></i>Advisor</a>
                             <a href="#/contacts" class="tab-item"> <i class="icon ion-ios-telephone"></i>Contacts</a>
                             <a href="#/main" class="tab-item"> <i class="icon ion-person-stalker"></i>Sellers</a>
-                            <a href="#/news" class="tab-item"> <i class="icon ion-social-rss"></i>News</a>
+                            <a href="#/news" class="tab-item"> <i class="icon ion-android-list"></i>News</a>
                             <a href="#/chats" class="tab-item"> <i class="icon ion-chatbubble"></i>Chats</a>
                             <a href="#/photo" class="tab-item"> <i class="icon ion-camera"></i>Pictures</a>
                             <a href="#/events" class="tab-item"> <i class="icon ion-calendar"></i>Events</a>

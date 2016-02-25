@@ -1,4 +1,47 @@
-<ion-view style="" title="Favorites">
+<ion-view style="" title="My Favorites">
+<ion-drawer-vertical-wrapper class="has-header" direction="down" state="closed">
+    <ion-drawer-vertical-content>
+    <label class="item item-input item-select">
+    <div class="input-label city">
+      City
+    </div>
+    <select class="city">
+      <option>Milan</option>
+      <option selected>Paris</option>
+      <option>France</option>
+    </select>
+  </label>
+    </ion-drawer-vertical-content>
+    <ion-drawer-vertical-handle />
+</ion-drawer-vertical-wrapper>
+<div class="tabs-striped tabs-background-stable tabs-color-dark">
+    <div class="tabs">
+      <a class="tab-item active" href="#">
+        All
+      </a>
+      <a class="tab-item" href="#">
+        Events
+      </a>
+      <a class="tab-item" href="#">
+        Articles
+      </a>
+      <a class="tab-item" href="#">
+        Contacts
+      </a>
+      <a class="tab-item" href="#">
+        Pictures
+      </a>
+      <a class="tab-item" href="#">
+        Jobs
+      </a>
+      <a class="tab-item" href="#">
+        Stores
+      </a>
+      <a class="tab-item" href="#">
+        History
+      </a>
+    </div>
+  </div>
     <ion-content padding="true">
         <ion-list>
             <div class="card">

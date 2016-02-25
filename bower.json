@@ -9,6 +9,7 @@
     "ngCordova": "~0.1.24-alpha",
     "ion-drawer-vertical": "^1.6.0",
     "ionic-rating": "^0.3.0",
-    "ionic-ratings": "^0.2.0"
+    "ionic-ratings": "^0.2.0",
+    "ionic-datepicker": "^0.9.0"
   }
 }

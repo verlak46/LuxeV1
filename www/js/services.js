@@ -9,747 +9,189 @@ angular.module('app.services', [])
         name: 'Art',
         img: 'img/iconcategory/art.png',
         brands: [{
-            brandName: 'Blancpain'
+            brandName: 'Kongo'
         }, {
-            brandName: 'Audemars Piguet'
+            brandName: 'Buffet'
         }, {
-            brandName: 'Boucheron'
+            brandName: 'Picasso'
         }, {
-            brandName: 'Breguet'
-        }, {
-            brandName: 'Breitling'
-        }, {
-            brandName: 'Bulgari'
-        }, {
-            brandName: 'Cartier'
-        }, {
-            brandName: 'Chanel'
-        }, {
-            brandName: 'Chaumet'
-        }, {
-            brandName: 'MCorum'
-        }, {
-            brandName: 'De Grisogono'
-        }, {
-            brandName: 'Real Estates'
-        }, {
-            brandName: 'DeWitt'
-        }, {
-            brandName: 'Dior'
-        }, {
-            brandName: 'F.-P. Journe'
-        }, {
-            brandName: 'Franck Muller'
-        }, {
-            brandName: 'Glashütte Original'
-        }, {
-            brandName: 'H. Moser & Cie'
-        }, {
-            brandName: 'Harry Winston'
-        }, {
-            brandName: 'Hermes'
-        }, {
-            brandName: 'Hublot'
-        }, {
-            brandName: 'IWC'
-        }, {
-            brandName: 'Jaeger-Le Coultre'
-        }, {
-            brandName: 'Jaquet Droz'
-        }, {
-            brandName: 'JeanRichard'
-        }, {
-            brandName: 'Longines'
-        }, {
-            brandName: 'Louis Vuitton'
-        }, {
-            brandName: 'MB&F'
-        }, {
-            brandName: 'Mikimoto'
-        }, {
-            brandName: 'Montblanc'
-        }, {
-            brandName: 'Omega'
-        }, {
-            brandName: 'Patek Philippe'
-        }, {
-            brandName: 'Piaget'
-        }, {
-            brandName: 'Rado'
-        }, {
-            brandName: 'Rolex'
-        }, {
-            brandName: 'Tiffany&Co'
-        }, {
-            brandName: 'Ulysse Nardin'
-        }, {
-            brandName: 'Vacheron Constantin'
-        }, {
-            brandName: 'Van Cleef'
+            brandName: 'Catalano'
         }]
     }, {
         id: '1',
         name: 'Boating',
         img: 'img/iconcategory/boating.png',
         brands: [{
-            brandName: 'Blancpain'
+            brandName: 'Azimut'
         }, {
-            brandName: 'Audemars Piguet'
+            brandName: 'Beneteau'
         }, {
-            brandName: 'Boucheron'
+            brandName: 'Ferretti'
         }, {
-            brandName: 'Breguet'
+            brandName: 'Itama'
         }, {
-            brandName: 'Breitling'
+            brandName: 'Lurssen'
         }, {
-            brandName: 'Bulgari'
+            brandName: 'Pershing'
         }, {
-            brandName: 'Cartier'
+            brandName: 'Princess'
         }, {
-            brandName: 'Chanel'
+            brandName: 'Riva'
         }, {
-            brandName: 'Chaumet'
+            brandName: 'Sunseeker'
         }, {
-            brandName: 'MCorum'
-        }, {
-            brandName: 'De Grisogono'
-        }, {
-            brandName: 'Real Estates'
-        }, {
-            brandName: 'DeWitt'
-        }, {
-            brandName: 'Dior'
-        }, {
-            brandName: 'F.-P. Journe'
-        }, {
-            brandName: 'Franck Muller'
-        }, {
-            brandName: 'Glashütte Original'
-        }, {
-            brandName: 'H. Moser & Cie'
-        }, {
-            brandName: 'Harry Winston'
-        }, {
-            brandName: 'Hermes'
-        }, {
-            brandName: 'Hublot'
-        }, {
-            brandName: 'IWC'
-        }, {
-            brandName: 'Jaeger-Le Coultre'
-        }, {
-            brandName: 'Jaquet Droz'
-        }, {
-            brandName: 'JeanRichard'
-        }, {
-            brandName: 'Longines'
-        }, {
-            brandName: 'Louis Vuitton'
-        }, {
-            brandName: 'MB&F'
-        }, {
-            brandName: 'Mikimoto'
-        }, {
-            brandName: 'Montblanc'
-        }, {
-            brandName: 'Omega'
-        }, {
-            brandName: 'Patek Philippe'
-        }, {
-            brandName: 'Piaget'
-        }, {
-            brandName: 'Rado'
-        }, {
-            brandName: 'Rolex'
-        }, {
-            brandName: 'Tiffany&Co'
-        }, {
-            brandName: 'Ulysse Nardin'
-        }, {
-            brandName: 'Vacheron Constantin'
-        }, {
-            brandName: 'Van Cleef'
+            brandName: 'Wally'
         }]
     }, {
         id: '2',
         name: 'Cigars',
         img: 'img/iconcategory/cigars.png',
         brands: [{
-            brandName: 'Blancpain'
+            brandName: 'Category 1'
         }, {
-            brandName: 'Audemars Piguet'
+            brandName: 'Category 2'
         }, {
-            brandName: 'Boucheron'
+            brandName: 'Category 3'
         }, {
-            brandName: 'Breguet'
-        }, {
-            brandName: 'Breitling'
-        }, {
-            brandName: 'Bulgari'
-        }, {
-            brandName: 'Cartier'
-        }, {
-            brandName: 'Chanel'
-        }, {
-            brandName: 'Chaumet'
-        }, {
-            brandName: 'MCorum'
-        }, {
-            brandName: 'De Grisogono'
-        }, {
-            brandName: 'Real Estates'
-        }, {
-            brandName: 'DeWitt'
-        }, {
-            brandName: 'Dior'
-        }, {
-            brandName: 'F.-P. Journe'
-        }, {
-            brandName: 'Franck Muller'
-        }, {
-            brandName: 'Glashütte Original'
-        }, {
-            brandName: 'H. Moser & Cie'
-        }, {
-            brandName: 'Harry Winston'
-        }, {
-            brandName: 'Hermes'
-        }, {
-            brandName: 'Hublot'
-        }, {
-            brandName: 'IWC'
-        }, {
-            brandName: 'Jaeger-Le Coultre'
-        }, {
-            brandName: 'Jaquet Droz'
-        }, {
-            brandName: 'JeanRichard'
-        }, {
-            brandName: 'Longines'
-        }, {
-            brandName: 'Louis Vuitton'
-        }, {
-            brandName: 'MB&F'
-        }, {
-            brandName: 'Mikimoto'
-        }, {
-            brandName: 'Montblanc'
-        }, {
-            brandName: 'Omega'
-        }, {
-            brandName: 'Patek Philippe'
-        }, {
-            brandName: 'Piaget'
-        }, {
-            brandName: 'Rado'
-        }, {
-            brandName: 'Rolex'
-        }, {
-            brandName: 'Tiffany&Co'
-        }, {
-            brandName: 'Ulysse Nardin'
-        }, {
-            brandName: 'Vacheron Constantin'
-        }, {
-            brandName: 'Van Cleef'
+            brandName: 'Category 4'
         }]
     }, {
         id: '3',
         name: 'Fashion & Leather goods',
         img: 'img/iconcategory/fashion.png',
         brands: [{
-            brandName: 'Blancpain'
-        }, {
-            brandName: 'Audemars Piguet'
-        }, {
-            brandName: 'Boucheron'
-        }, {
-            brandName: 'Breguet'
-        }, {
-            brandName: 'Breitling'
-        }, {
-            brandName: 'Bulgari'
-        }, {
-            brandName: 'Cartier'
-        }, {
             brandName: 'Chanel'
         }, {
-            brandName: 'Chaumet'
+            brandName: 'Christian Dior'
         }, {
-            brandName: 'MCorum'
+            brandName: 'Ermenegildo Zegna'
         }, {
-            brandName: 'De Grisogono'
+            brandName: 'Fendi'
         }, {
-            brandName: 'Real Estates'
+            brandName: 'Ferragamo'
         }, {
-            brandName: 'DeWitt'
+            brandName: 'Giorgio Armani'
         }, {
-            brandName: 'Dior'
+            brandName: 'Hermès'
         }, {
-            brandName: 'F.-P. Journe'
-        }, {
-            brandName: 'Franck Muller'
-        }, {
-            brandName: 'Glashütte Original'
-        }, {
-            brandName: 'H. Moser & Cie'
-        }, {
-            brandName: 'Harry Winston'
-        }, {
-            brandName: 'Hermes'
-        }, {
-            brandName: 'Hublot'
-        }, {
-            brandName: 'IWC'
-        }, {
-            brandName: 'Jaeger-Le Coultre'
-        }, {
-            brandName: 'Jaquet Droz'
-        }, {
-            brandName: 'JeanRichard'
-        }, {
-            brandName: 'Longines'
+            brandName: 'Louboutin'
         }, {
             brandName: 'Louis Vuitton'
         }, {
-            brandName: 'MB&F'
+            brandName: 'Prada'
         }, {
-            brandName: 'Mikimoto'
-        }, {
-            brandName: 'Montblanc'
-        }, {
-            brandName: 'Omega'
-        }, {
-            brandName: 'Patek Philippe'
-        }, {
-            brandName: 'Piaget'
-        }, {
-            brandName: 'Rado'
-        }, {
-            brandName: 'Rolex'
-        }, {
-            brandName: 'Tiffany&Co'
-        }, {
-            brandName: 'Ulysse Nardin'
-        }, {
-            brandName: 'Vacheron Constantin'
-        }, {
-            brandName: 'Van Cleef'
+            brandName: 'Versace'
         }]
     }, {
         id: '4',
         name: 'Food & Beverage',
         img: 'img/iconcategory/food.png',
         brands: [{
-            brandName: 'Blancpain'
+            brandName: 'Category 1'
         }, {
-            brandName: 'Audemars Piguet'
+            brandName: 'Category 2'
         }, {
-            brandName: 'Boucheron'
+            brandName: 'Category 3'
         }, {
-            brandName: 'Breguet'
-        }, {
-            brandName: 'Breitling'
-        }, {
-            brandName: 'Bulgari'
-        }, {
-            brandName: 'Cartier'
-        }, {
-            brandName: 'Chanel'
-        }, {
-            brandName: 'Chaumet'
-        }, {
-            brandName: 'MCorum'
-        }, {
-            brandName: 'De Grisogono'
-        }, {
-            brandName: 'Real Estates'
-        }, {
-            brandName: 'DeWitt'
-        }, {
-            brandName: 'Dior'
-        }, {
-            brandName: 'F.-P. Journe'
-        }, {
-            brandName: 'Franck Muller'
-        }, {
-            brandName: 'Glashütte Original'
-        }, {
-            brandName: 'H. Moser & Cie'
-        }, {
-            brandName: 'Harry Winston'
-        }, {
-            brandName: 'Hermes'
-        }, {
-            brandName: 'Hublot'
-        }, {
-            brandName: 'IWC'
-        }, {
-            brandName: 'Jaeger-Le Coultre'
-        }, {
-            brandName: 'Jaquet Droz'
-        }, {
-            brandName: 'JeanRichard'
-        }, {
-            brandName: 'Longines'
-        }, {
-            brandName: 'Louis Vuitton'
-        }, {
-            brandName: 'MB&F'
-        }, {
-            brandName: 'Mikimoto'
-        }, {
-            brandName: 'Montblanc'
-        }, {
-            brandName: 'Omega'
-        }, {
-            brandName: 'Patek Philippe'
-        }, {
-            brandName: 'Piaget'
-        }, {
-            brandName: 'Rado'
-        }, {
-            brandName: 'Rolex'
-        }, {
-            brandName: 'Tiffany&Co'
-        }, {
-            brandName: 'Ulysse Nardin'
-        }, {
-            brandName: 'Vacheron Constantin'
-        }, {
-            brandName: 'Van Cleef'
+            brandName: 'Category 4'
         }]
     }, {
         id: '5',
         name: 'Furnitures',
         img: 'img/iconcategory/furnitures.png',
         brands: [{
-            brandName: 'Blancpain'
+            brandName: 'Category 1'
         }, {
-            brandName: 'Audemars Piguet'
+            brandName: 'Category 2'
         }, {
-            brandName: 'Boucheron'
+            brandName: 'Category 3'
         }, {
-            brandName: 'Breguet'
-        }, {
-            brandName: 'Breitling'
-        }, {
-            brandName: 'Bulgari'
-        }, {
-            brandName: 'Cartier'
-        }, {
-            brandName: 'Chanel'
-        }, {
-            brandName: 'Chaumet'
-        }, {
-            brandName: 'MCorum'
-        }, {
-            brandName: 'De Grisogono'
-        }, {
-            brandName: 'Real Estates'
-        }, {
-            brandName: 'DeWitt'
-        }, {
-            brandName: 'Dior'
-        }, {
-            brandName: 'F.-P. Journe'
-        }, {
-            brandName: 'Franck Muller'
-        }, {
-            brandName: 'Glashütte Original'
-        }, {
-            brandName: 'H. Moser & Cie'
-        }, {
-            brandName: 'Harry Winston'
-        }, {
-            brandName: 'Hermes'
-        }, {
-            brandName: 'Hublot'
-        }, {
-            brandName: 'IWC'
-        }, {
-            brandName: 'Jaeger-Le Coultre'
-        }, {
-            brandName: 'Jaquet Droz'
-        }, {
-            brandName: 'JeanRichard'
-        }, {
-            brandName: 'Longines'
-        }, {
-            brandName: 'Louis Vuitton'
-        }, {
-            brandName: 'MB&F'
-        }, {
-            brandName: 'Mikimoto'
-        }, {
-            brandName: 'Montblanc'
-        }, {
-            brandName: 'Omega'
-        }, {
-            brandName: 'Patek Philippe'
-        }, {
-            brandName: 'Piaget'
-        }, {
-            brandName: 'Rado'
-        }, {
-            brandName: 'Rolex'
-        }, {
-            brandName: 'Tiffany&Co'
-        }, {
-            brandName: 'Ulysse Nardin'
-        }, {
-            brandName: 'Vacheron Constantin'
-        }, {
-            brandName: 'Van Cleef'
+            brandName: 'Category 4'
         }]
     }, {
         id: '6',
-        name: 'Hôtels Luxe 5*',
+        name: 'Hotel 5*',
         img: 'img/iconcategory/hotel.png',
         brands: [{
-            brandName: 'Blancpain'
+            brandName: 'Amanruya'
         }, {
-            brandName: 'Audemars Piguet'
+            brandName: 'Armani Hotel'
         }, {
-            brandName: 'Boucheron'
+            brandName: 'Banyan Tree'
         }, {
-            brandName: 'Breguet'
+            brandName: 'Burj Al-Arab'
         }, {
-            brandName: 'Breitling'
+            brandName: 'Cheval Blanc'
         }, {
-            brandName: 'Bulgari'
+            brandName: 'Fregate Island Private'
         }, {
-            brandName: 'Cartier'
+            brandName: 'Le Toiny'
         }, {
-            brandName: 'Chanel'
+            brandName: 'Turtle Island'
         }, {
-            brandName: 'Chaumet'
+            brandName: 'Le Sirenuse'
         }, {
-            brandName: 'MCorum'
+            brandName: 'North Island'
         }, {
-            brandName: 'De Grisogono'
+            brandName: 'Ritz'
         }, {
-            brandName: 'Real Estates'
+            brandName: 'Shangri La'
         }, {
-            brandName: 'DeWitt'
+            brandName: 'Wakaya Club'
         }, {
-            brandName: 'Dior'
-        }, {
-            brandName: 'F.-P. Journe'
-        }, {
-            brandName: 'Franck Muller'
-        }, {
-            brandName: 'Glashütte Original'
-        }, {
-            brandName: 'H. Moser & Cie'
-        }, {
-            brandName: 'Harry Winston'
-        }, {
-            brandName: 'Hermes'
-        }, {
-            brandName: 'Hublot'
-        }, {
-            brandName: 'IWC'
-        }, {
-            brandName: 'Jaeger-Le Coultre'
-        }, {
-            brandName: 'Jaquet Droz'
-        }, {
-            brandName: 'JeanRichard'
-        }, {
-            brandName: 'Longines'
-        }, {
-            brandName: 'Louis Vuitton'
-        }, {
-            brandName: 'MB&F'
-        }, {
-            brandName: 'Mikimoto'
-        }, {
-            brandName: 'Montblanc'
-        }, {
-            brandName: 'Omega'
-        }, {
-            brandName: 'Patek Philippe'
-        }, {
-            brandName: 'Piaget'
-        }, {
-            brandName: 'Rado'
-        }, {
-            brandName: 'Rolex'
-        }, {
-            brandName: 'Tiffany&Co'
-        }, {
-            brandName: 'Ulysse Nardin'
-        }, {
-            brandName: 'Vacheron Constantin'
-        }, {
-            brandName: 'Van Cleef'
+            brandName: 'W-Hotel'
         }]
     }, {
         id: '7',
         name: 'Jet',
         img: 'img/iconcategory/jet.png',
         brands: [{
-            brandName: 'Blancpain'
+            brandName: 'Bellhelicopter'
         }, {
-            brandName: 'Audemars Piguet'
+            brandName: 'Bombardier'
         }, {
-            brandName: 'Boucheron'
+            brandName: 'Cessna'
         }, {
-            brandName: 'Breguet'
+            brandName: 'Cirrus'
         }, {
-            brandName: 'Breitling'
+            brandName: 'Dassault'
         }, {
-            brandName: 'Bulgari'
+            brandName: 'Embraer'
         }, {
-            brandName: 'Cartier'
+            brandName: 'Eurocopter'
         }, {
-            brandName: 'Chanel'
+            brandName: 'Gulfstream'
         }, {
-            brandName: 'Chaumet'
+            brandName: 'Hawker Beech'
         }, {
-            brandName: 'MCorum'
-        }, {
-            brandName: 'De Grisogono'
-        }, {
-            brandName: 'Real Estates'
-        }, {
-            brandName: 'DeWitt'
-        }, {
-            brandName: 'Dior'
-        }, {
-            brandName: 'F.-P. Journe'
-        }, {
-            brandName: 'Franck Muller'
-        }, {
-            brandName: 'Glashütte Original'
-        }, {
-            brandName: 'H. Moser & Cie'
-        }, {
-            brandName: 'Harry Winston'
-        }, {
-            brandName: 'Hermes'
-        }, {
-            brandName: 'Hublot'
-        }, {
-            brandName: 'IWC'
-        }, {
-            brandName: 'Jaeger-Le Coultre'
-        }, {
-            brandName: 'Jaquet Droz'
-        }, {
-            brandName: 'JeanRichard'
-        }, {
-            brandName: 'Longines'
-        }, {
-            brandName: 'Louis Vuitton'
-        }, {
-            brandName: 'MB&F'
-        }, {
-            brandName: 'Mikimoto'
-        }, {
-            brandName: 'Montblanc'
-        }, {
-            brandName: 'Omega'
-        }, {
-            brandName: 'Patek Philippe'
-        }, {
-            brandName: 'Piaget'
-        }, {
-            brandName: 'Rado'
-        }, {
-            brandName: 'Rolex'
-        }, {
-            brandName: 'Tiffany&Co'
-        }, {
-            brandName: 'Ulysse Nardin'
-        }, {
-            brandName: 'Vacheron Constantin'
-        }, {
-            brandName: 'Van Cleef'
+            brandName: 'Sikorsky'
         }]
     }, {
         id: '8',
         name: 'Luxury Cars',
         img: 'img/iconcategory/car.png',
         brands: [{
-            brandName: 'Blancpain'
+            brandName: 'Aston Martin'
         }, {
-            brandName: 'Audemars Piguet'
+            brandName: 'Bentley'
         }, {
-            brandName: 'Boucheron'
+            brandName: 'Bugatti'
         }, {
-            brandName: 'Breguet'
+            brandName: 'Ferrari'
         }, {
-            brandName: 'Breitling'
+            brandName: 'Harley Davidson'
         }, {
-            brandName: 'Bulgari'
+            brandName: 'Koenigsegg'
         }, {
-            brandName: 'Cartier'
+            brandName: 'Lamborghini'
         }, {
-            brandName: 'Chanel'
+            brandName: 'Maserati'
         }, {
-            brandName: 'Chaumet'
+            brandName: 'Pagani'
         }, {
-            brandName: 'MCorum'
+            brandName: 'Rolls-Royce'
         }, {
-            brandName: 'De Grisogono'
-        }, {
-            brandName: 'Real Estates'
-        }, {
-            brandName: 'DeWitt'
-        }, {
-            brandName: 'Dior'
-        }, {
-            brandName: 'F.-P. Journe'
-        }, {
-            brandName: 'Franck Muller'
-        }, {
-            brandName: 'Glashütte Original'
-        }, {
-            brandName: 'H. Moser & Cie'
-        }, {
-            brandName: 'Harry Winston'
-        }, {
-            brandName: 'Hermes'
-        }, {
-            brandName: 'Hublot'
-        }, {
-            brandName: 'IWC'
-        }, {
-            brandName: 'Jaeger-Le Coultre'
-        }, {
-            brandName: 'Jaquet Droz'
-        }, {
-            brandName: 'JeanRichard'
-        }, {
-            brandName: 'Longines'
-        }, {
-            brandName: 'Louis Vuitton'
-        }, {
-            brandName: 'MB&F'
-        }, {
-            brandName: 'Mikimoto'
-        }, {
-            brandName: 'Montblanc'
-        }, {
-            brandName: 'Omega'
-        }, {
-            brandName: 'Patek Philippe'
-        }, {
-            brandName: 'Piaget'
-        }, {
-            brandName: 'Rado'
-        }, {
-            brandName: 'Rolex'
-        }, {
-            brandName: 'Tiffany&Co'
-        }, {
-            brandName: 'Ulysse Nardin'
-        }, {
-            brandName: 'Vacheron Constantin'
-        }, {
-            brandName: 'Van Cleef'
+            brandName: 'Spyker'
         }]
     }, {
         id: '9',
@@ -839,83 +281,25 @@ angular.module('app.services', [])
         name: 'Perfumes & Cosmetics',
         img: 'img/iconcategory/perfume.png',
         brands: [{
-            brandName: 'Blancpain'
-        }, {
-            brandName: 'Audemars Piguet'
-        }, {
-            brandName: 'Boucheron'
-        }, {
-            brandName: 'Breguet'
-        }, {
-            brandName: 'Breitling'
-        }, {
-            brandName: 'Bulgari'
-        }, {
-            brandName: 'Cartier'
+            brandName: 'Biotherm'
         }, {
             brandName: 'Chanel'
         }, {
-            brandName: 'Chaumet'
+            brandName: 'Christian Dior'
         }, {
-            brandName: 'MCorum'
+            brandName: 'Givenchy'
         }, {
-            brandName: 'De Grisogono'
+            brandName: 'Guerlain'
         }, {
-            brandName: 'Real Estates'
+            brandName: 'Helena Rubinstein'
         }, {
-            brandName: 'DeWitt'
+            brandName: 'La Mer'
         }, {
-            brandName: 'Dior'
+            brandName: 'La Prairie'
         }, {
-            brandName: 'F.-P. Journe'
+            brandName: 'Lancôme'
         }, {
-            brandName: 'Franck Muller'
-        }, {
-            brandName: 'Glashütte Original'
-        }, {
-            brandName: 'H. Moser & Cie'
-        }, {
-            brandName: 'Harry Winston'
-        }, {
-            brandName: 'Hermes'
-        }, {
-            brandName: 'Hublot'
-        }, {
-            brandName: 'IWC'
-        }, {
-            brandName: 'Jaeger-Le Coultre'
-        }, {
-            brandName: 'Jaquet Droz'
-        }, {
-            brandName: 'JeanRichard'
-        }, {
-            brandName: 'Longines'
-        }, {
-            brandName: 'Louis Vuitton'
-        }, {
-            brandName: 'MB&F'
-        }, {
-            brandName: 'Mikimoto'
-        }, {
-            brandName: 'Montblanc'
-        }, {
-            brandName: 'Omega'
-        }, {
-            brandName: 'Patek Philippe'
-        }, {
-            brandName: 'Piaget'
-        }, {
-            brandName: 'Rado'
-        }, {
-            brandName: 'Rolex'
-        }, {
-            brandName: 'Tiffany&Co'
-        }, {
-            brandName: 'Ulysse Nardin'
-        }, {
-            brandName: 'Vacheron Constantin'
-        }, {
-            brandName: 'Van Cleef'
+            brandName: 'Sisley'
         }]
     }, {
         id: '11',
@@ -1005,83 +389,23 @@ angular.module('app.services', [])
         name: 'To be discovered',
         img: 'img/iconcategory/to-be-discovered.png',
         brands: [{
-            brandName: 'Blancpain'
+            brandName: 'Aurora'
         }, {
-            brandName: 'Audemars Piguet'
+            brandName: 'Bluthner'
         }, {
-            brandName: 'Boucheron'
+            brandName: 'Bose'
         }, {
-            brandName: 'Breguet'
+            brandName: 'Lotos'
         }, {
-            brandName: 'Breitling'
+            brandName: 'Segway PT'
         }, {
-            brandName: 'Bulgari'
+            brandName: 'ShangXia'
         }, {
-            brandName: 'Cartier'
+            brandName: 'Steinway'
         }, {
-            brandName: 'Chanel'
+            brandName: 'Sun Valley Icewine'
         }, {
-            brandName: 'Chaumet'
-        }, {
-            brandName: 'MCorum'
-        }, {
-            brandName: 'De Grisogono'
-        }, {
-            brandName: 'Real Estates'
-        }, {
-            brandName: 'DeWitt'
-        }, {
-            brandName: 'Dior'
-        }, {
-            brandName: 'F.-P. Journe'
-        }, {
-            brandName: 'Franck Muller'
-        }, {
-            brandName: 'Glashütte Original'
-        }, {
-            brandName: 'H. Moser & Cie'
-        }, {
-            brandName: 'Harry Winston'
-        }, {
-            brandName: 'Hermes'
-        }, {
-            brandName: 'Hublot'
-        }, {
-            brandName: 'IWC'
-        }, {
-            brandName: 'Jaeger-Le Coultre'
-        }, {
-            brandName: 'Jaquet Droz'
-        }, {
-            brandName: 'JeanRichard'
-        }, {
-            brandName: 'Longines'
-        }, {
-            brandName: 'Louis Vuitton'
-        }, {
-            brandName: 'MB&F'
-        }, {
-            brandName: 'Mikimoto'
-        }, {
-            brandName: 'Montblanc'
-        }, {
-            brandName: 'Omega'
-        }, {
-            brandName: 'Patek Philippe'
-        }, {
-            brandName: 'Piaget'
-        }, {
-            brandName: 'Rado'
-        }, {
-            brandName: 'Rolex'
-        }, {
-            brandName: 'Tiffany&Co'
-        }, {
-            brandName: 'Ulysse Nardin'
-        }, {
-            brandName: 'Vacheron Constantin'
-        }, {
-            brandName: 'Van Cleef'
+            brandName: 'Vertu'
         }]
     }, {
         id: '13',
@@ -1171,83 +495,25 @@ angular.module('app.services', [])
         name: 'Wines & Spirits',
         img: 'img/iconcategory/wine.png',
         brands: [{
-            brandName: 'Blancpain'
+            brandName: 'Château Lafite Rothschild'
         }, {
-            brandName: 'Audemars Piguet'
+            brandName: 'Dom Pérignon'
         }, {
-            brandName: 'Boucheron'
+            brandName: 'L\'or De Jean Martell' 
         }, {
-            brandName: 'Breguet'
+            brandName: 'Louis XIII'
         }, {
-            brandName: 'Breitling'
+            brandName: 'Macallan'
         }, {
-            brandName: 'Bulgari'
+            brandName: 'Meritage'
         }, {
-            brandName: 'Cartier'
+            brandName: 'Perrier Jouet'
         }, {
-            brandName: 'Chanel'
+            brandName: 'Richard Hennessy'
         }, {
-            brandName: 'Chaumet'
+            brandName: 'Ron zacapa'
         }, {
-            brandName: 'MCorum'
-        }, {
-            brandName: 'De Grisogono'
-        }, {
-            brandName: 'Real Estates'
-        }, {
-            brandName: 'DeWitt'
-        }, {
-            brandName: 'Dior'
-        }, {
-            brandName: 'F.-P. Journe'
-        }, {
-            brandName: 'Franck Muller'
-        }, {
-            brandName: 'Glashütte Original'
-        }, {
-            brandName: 'H. Moser & Cie'
-        }, {
-            brandName: 'Harry Winston'
-        }, {
-            brandName: 'Hermes'
-        }, {
-            brandName: 'Hublot'
-        }, {
-            brandName: 'IWC'
-        }, {
-            brandName: 'Jaeger-Le Coultre'
-        }, {
-            brandName: 'Jaquet Droz'
-        }, {
-            brandName: 'JeanRichard'
-        }, {
-            brandName: 'Longines'
-        }, {
-            brandName: 'Louis Vuitton'
-        }, {
-            brandName: 'MB&F'
-        }, {
-            brandName: 'Mikimoto'
-        }, {
-            brandName: 'Montblanc'
-        }, {
-            brandName: 'Omega'
-        }, {
-            brandName: 'Patek Philippe'
-        }, {
-            brandName: 'Piaget'
-        }, {
-            brandName: 'Rado'
-        }, {
-            brandName: 'Rolex'
-        }, {
-            brandName: 'Tiffany&Co'
-        }, {
-            brandName: 'Ulysse Nardin'
-        }, {
-            brandName: 'Vacheron Constantin'
-        }, {
-            brandName: 'Van Cleef'
+            brandName: 'Château Pétrus'
         }]
     }];
     return {

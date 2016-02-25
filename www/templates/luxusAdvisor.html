@@ -1,4 +1,7 @@
 <ion-view style="" title="Store advisor">
+<ion-nav-buttons side="right">
+    <button class="button button-icon ion-navicon" ng-click="popover.show($event)"></button>
+   </ion-nav-buttons>
     <ion-content>
         <ion-list>
             <a ng-repeat="rate in rates" class="item item-thumbnail-left">

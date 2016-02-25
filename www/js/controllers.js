@@ -83,11 +83,6 @@ angular.module('app.controllers', [])
         console.log('Selected rating is : ', rating);
     };
 
-    // set the rate and max variables
-    $scope.rating = {};
-    $scope.rating.rate = 3;
-    $scope.rating.max = 5;
-
     // Popover links
 
     $scope.goDeclare = function() {
@@ -266,8 +261,51 @@ angular.module('app.controllers', [])
     };
 })
       
-.controller('categoriesCtrl', function($scope, $state, DataFactory) {
+.controller('categoriesCtrl', function($scope, $state, $ionicPopover, DataFactory) {
     $scope.categories = DataFactory.all();
+
+    // Popover links
+
+    $scope.goDeclare = function() {
+        $state.go("declare");
+        $scope.popover.hide();
+    };
+
+    $scope.goPing = function() {
+        $state.go("ping");
+        $scope.popover.hide();
+    };
+
+    $scope.goPayment = function() {
+        $state.go("wallet");
+        $scope.popover.hide();
+    };
+
+    $scope.goDetax = function() {
+        $state.go("detax");
+        $scope.popover.hide();
+    };
+
+    $scope.goFavorites = function() {
+        $state.go("favorites");
+        $scope.popover.hide();
+    };
+
+    $scope.goMyProfile = function() {
+        $state.go("myProfile");
+        $scope.popover.hide();
+    };
+
+    $scope.goSettings = function() {
+        $state.go("parameters");
+        $scope.popover.hide();
+    };
+
+    $ionicPopover.fromTemplateUrl('templates/popover.html', {
+        scope: $scope,
+    }).then(function(popover) {
+        $scope.popover = popover;
+    });
 
     $scope.categorySelection= function(numCategory) {
         DataFactory.setCategoryNumber(numCategory);
@@ -275,10 +313,53 @@ angular.module('app.controllers', [])
     };
 })
 
-.controller('brandsCtrl', function($scope, $state, DataFactory) {
+.controller('brandsCtrl', function($scope, $state, $ionicPopover, DataFactory) {
     $scope.categories = DataFactory.all();
 
     $scope.categoryNumber = DataFactory.getCategoryNumber();
+
+    // Popover links
+
+    $scope.goDeclare = function() {
+        $state.go("declare");
+        $scope.popover.hide();
+    };
+
+    $scope.goPing = function() {
+        $state.go("ping");
+        $scope.popover.hide();
+    };
+
+    $scope.goPayment = function() {
+        $state.go("wallet");
+        $scope.popover.hide();
+    };
+
+    $scope.goDetax = function() {
+        $state.go("detax");
+        $scope.popover.hide();
+    };
+
+    $scope.goFavorites = function() {
+        $state.go("favorites");
+        $scope.popover.hide();
+    };
+
+    $scope.goMyProfile = function() {
+        $state.go("myProfile");
+        $scope.popover.hide();
+    };
+
+    $scope.goSettings = function() {
+        $state.go("parameters");
+        $scope.popover.hide();
+    };
+
+    $ionicPopover.fromTemplateUrl('templates/popover.html', {
+        scope: $scope,
+    }).then(function(popover) {
+        $scope.popover = popover;
+    });
 
     $scope.sizeSelection = function(brand) {
         DataFactory.setBrand(brand);
@@ -292,7 +373,7 @@ angular.module('app.controllers', [])
     $scope.categoryNumber = DataFactory.getCategoryNumber();
 
     $scope.items = [
-    { text: "New", value: "nw" },
+    { text: "New", value: "nw" , checked: "true"},
     { text: "Second hand", value: "sh" }
     ];
 
@@ -320,7 +401,7 @@ angular.module('app.controllers', [])
     };
 })
 
-.controller('ChatsCtrl', function($scope, $stateParams, $ionicFilterBar, Chats) {
+.controller('ChatsCtrl', function($scope, $stateParams, $ionicFilterBar, $state, $ionicPopover, Chats) {
   $scope.chats = Chats.all();
   $scope.remove = function(chat) {
     Chats.remove(chat);
@@ -328,9 +409,94 @@ angular.module('app.controllers', [])
   $scope.filter = function() {
     $ionicFilterBar.show();
   };
+  // Popover links
+
+    $scope.goDeclare = function() {
+        $state.go("declare");
+        $scope.popover.hide();
+    };
+
+    $scope.goPing = function() {
+        $state.go("ping");
+        $scope.popover.hide();
+    };
+
+    $scope.goPayment = function() {
+        $state.go("wallet");
+        $scope.popover.hide();
+    };
+
+    $scope.goDetax = function() {
+        $state.go("detax");
+        $scope.popover.hide();
+    };
+
+    $scope.goFavorites = function() {
+        $state.go("favorites");
+        $scope.popover.hide();
+    };
+
+    $scope.goMyProfile = function() {
+        $state.go("myProfile");
+        $scope.popover.hide();
+    };
+
+    $scope.goSettings = function() {
+        $state.go("parameters");
+        $scope.popover.hide();
+    };
+
+    $ionicPopover.fromTemplateUrl('templates/popover.html', {
+        scope: $scope,
+    }).then(function(popover) {
+        $scope.popover = popover;
+    });
 })
 
-.controller('ContactsCtrl', function($scope, $ionicFilterBar) {
+.controller('ContactsCtrl', function($scope, $ionicFilterBar, $state, $ionicPopover) {
+  // Popover links
+
+    $scope.goDeclare = function() {
+        $state.go("declare");
+        $scope.popover.hide();
+    };
+
+    $scope.goPing = function() {
+        $state.go("ping");
+        $scope.popover.hide();
+    };
+
+    $scope.goPayment = function() {
+        $state.go("wallet");
+        $scope.popover.hide();
+    };
+
+    $scope.goDetax = function() {
+        $state.go("detax");
+        $scope.popover.hide();
+    };
+
+    $scope.goFavorites = function() {
+        $state.go("favorites");
+        $scope.popover.hide();
+    };
+
+    $scope.goMyProfile = function() {
+        $state.go("myProfile");
+        $scope.popover.hide();
+    };
+
+    $scope.goSettings = function() {
+        $state.go("parameters");
+        $scope.popover.hide();
+    };
+
+    $ionicPopover.fromTemplateUrl('templates/popover.html', {
+        scope: $scope,
+    }).then(function(popover) {
+        $scope.popover = popover;
+    });
+
   $scope.filter = function() {
     $ionicFilterBar.show();
   };
@@ -356,8 +522,50 @@ angular.module('app.controllers', [])
     $scope.publication = FavoriteFactory.get($stateParams.mypublicationsId);
 })
 
-.controller('newsCtrl', function($scope, StoresFactory) {
+.controller('newsCtrl', function($scope, $ionicPopover, $state, StoresFactory) {
     $scope.stores=StoresFactory.all();
+    // Popover links
+
+    $scope.goDeclare = function() {
+        $state.go("declare");
+        $scope.popover.hide();
+    };
+
+    $scope.goPing = function() {
+        $state.go("ping");
+        $scope.popover.hide();
+    };
+
+    $scope.goPayment = function() {
+        $state.go("wallet");
+        $scope.popover.hide();
+    };
+
+    $scope.goDetax = function() {
+        $state.go("detax");
+        $scope.popover.hide();
+    };
+
+    $scope.goFavorites = function() {
+        $state.go("favorites");
+        $scope.popover.hide();
+    };
+
+    $scope.goMyProfile = function() {
+        $state.go("myProfile");
+        $scope.popover.hide();
+    };
+
+    $scope.goSettings = function() {
+        $state.go("parameters");
+        $scope.popover.hide();
+    };
+
+    $ionicPopover.fromTemplateUrl('templates/popover.html', {
+        scope: $scope,
+    }).then(function(popover) {
+        $scope.popover = popover;
+    });
 })
 
 .controller('newsDetailCtrl', function($scope, StoresFactory, $stateParams) {
@@ -525,7 +733,7 @@ angular.module('app.controllers', [])
     }];
 })
 
-.controller('luxusAdvisorCtrl', function($scope) {
+.controller('luxusAdvisorCtrl', function($scope, $ionicPopover, $state) {
 
     $scope.rates = [{
         name: "Louis Vuitton",
@@ -536,6 +744,49 @@ angular.module('app.controllers', [])
         category: "Store",
         img: 'img/agent-store/7.jpg'
     }];
+
+    // Popover links
+
+    $scope.goDeclare = function() {
+        $state.go("declare");
+        $scope.popover.hide();
+    };
+
+    $scope.goPing = function() {
+        $state.go("ping");
+        $scope.popover.hide();
+    };
+
+    $scope.goPayment = function() {
+        $state.go("wallet");
+        $scope.popover.hide();
+    };
+
+    $scope.goDetax = function() {
+        $state.go("detax");
+        $scope.popover.hide();
+    };
+
+    $scope.goFavorites = function() {
+        $state.go("favorites");
+        $scope.popover.hide();
+    };
+
+    $scope.goMyProfile = function() {
+        $state.go("myProfile");
+        $scope.popover.hide();
+    };
+
+    $scope.goSettings = function() {
+        $state.go("parameters");
+        $scope.popover.hide();
+    };
+
+    $ionicPopover.fromTemplateUrl('templates/popover.html', {
+        scope: $scope,
+    }).then(function(popover) {
+        $scope.popover = popover;
+    });
 })
 
 .controller('startCtrl', function($scope) {
@@ -581,8 +832,49 @@ angular.module('app.controllers', [])
   
 })*/
 
-.controller('pingCtrl', function($scope, $state, DataFactory) {
+.controller('pingCtrl', function($scope, $state, $ionicPopover, DataFactory) {
+    // Popover links
 
+    $scope.goDeclare = function() {
+        $state.go("declare");
+        $scope.popover.hide();
+    };
+
+    $scope.goPing = function() {
+        $state.go("ping");
+        $scope.popover.hide();
+    };
+
+    $scope.goPayment = function() {
+        $state.go("wallet");
+        $scope.popover.hide();
+    };
+
+    $scope.goDetax = function() {
+        $state.go("detax");
+        $scope.popover.hide();
+    };
+
+    $scope.goFavorites = function() {
+        $state.go("favorites");
+        $scope.popover.hide();
+    };
+
+    $scope.goMyProfile = function() {
+        $state.go("myProfile");
+        $scope.popover.hide();
+    };
+
+    $scope.goSettings = function() {
+        $state.go("parameters");
+        $scope.popover.hide();
+    };
+
+    $ionicPopover.fromTemplateUrl('templates/popover.html', {
+        scope: $scope,
+    }).then(function(popover) {
+        $scope.popover = popover;
+    });
 })
 
 .controller('findProductCtrl', function($scope) {

@@ -123,7 +123,7 @@
 /* Popover */
 
 .popover-menu {
-    height: 400px;
+    height: 505px;
     background-color: #222 !important;
     opacity: 0.9 !important;
     /*width: 160px;*/
@@ -146,4 +146,12 @@
 
 ion-drawer-vertical-wrapper {
     height: initial !important;
+}
+
+ion-drawer-vertical-handle {
+    background: transparent url('/img/more.png') 50% 50% no-repeat !important;
+}
+
+.city {
+    font-size: 21px !important;
 }
