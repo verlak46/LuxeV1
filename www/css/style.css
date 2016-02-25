@@ -149,7 +149,7 @@ ion-drawer-vertical-wrapper {
 }
 
 ion-drawer-vertical-handle {
-    background: transparent url('/img/more.png') 50% 50% no-repeat !important;
+    background: transparent url('../img/more.png') 50% 50% no-repeat !important;
 }
 
 .city {
