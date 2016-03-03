@@ -167,3 +167,12 @@ ion-drawer-vertical-handle {
     font-size: 14px;
     color: #9A9898;
 }
+
+.ion-shop:before {
+content: url('../img/store.png') !important; 
+opacity: 0.4;
+}
+
+.active .ion-shop {
+    content: url('../img/store.png') !important;
+}
