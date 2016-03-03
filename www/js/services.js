@@ -541,22 +541,38 @@ angular.module('app.services', [])
     id: 0,
     name: 'Ben Sparrow',
     lastText: 'You on your way?',
-    face: 'https://pbs.twimg.com/profile_images/514549811765211136/9SgAuHeY.png'
+    face: 'https://pbs.twimg.com/profile_images/514549811765211136/9SgAuHeY.png',
+    lastMessage: {
+        text: 'You on your way?',
+        timestamp: moment().subtract(1, 'hours')
+      }
   }, {
     id: 1,
     name: 'Max Lynx',
     lastText: 'Hey, it\'s me',
-    face: 'https://avatars3.githubusercontent.com/u/11214?v=3&s=460'
+    face: 'https://avatars3.githubusercontent.com/u/11214?v=3&s=460',
+    lastMessage: {
+        text: 'Hey, it\'s me',
+        timestamp: moment().subtract(2, 'hours')
+      }
   }, {
     id: 2,
     name: 'Adam Bradleyson',
     lastText: 'I should buy a boat',
-    face: 'https://pbs.twimg.com/profile_images/479090794058379264/84TKj_qa.jpeg'
+    face: 'https://pbs.twimg.com/profile_images/479090794058379264/84TKj_qa.jpeg',
+    lastMessage: {
+        text: 'I should buy a boat',
+        timestamp: moment().subtract(1, 'days')
+      }
   }, {
     id: 3,
     name: 'Perry Governor',
     lastText: 'Look my products!',
-    face: 'https://pbs.twimg.com/profile_images/598205061232103424/3j5HUXMY.png'
+    face: 'https://pbs.twimg.com/profile_images/598205061232103424/3j5HUXMY.png',
+    lastMessage: {
+        text: 'Look at my mukluks!',
+        timestamp: moment().subtract(4, 'days')
+      }
   }];
 
   return {

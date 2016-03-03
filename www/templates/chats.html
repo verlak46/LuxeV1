@@ -1,21 +1,25 @@
 <ion-view style="" title="Chats">
 <ion-drawer-vertical-wrapper class="has-header" direction="down" state="closed">
     <ion-drawer-vertical-content>
-    <label class="item item-input item-select">
-    <div class="input-label city">
-      City
-    </div>
+    <label class="item item-input">
+    <i class="icon ion-search placeholder-icon"></i>
+    <input type="text" placeholder="Search">
+  </label>
+    <label class="item item-select">
     <select class="city">
       <option>Milan</option>
       <option selected>Paris</option>
       <option>France</option>
     </select>
   </label>
+        <div class="row" style="background-color: white">
+          <div class="col"><ionic-ratings ratingsobj='ratingsObject'></ionic-ratings></div>
+        </div>
     </ion-drawer-vertical-content>
     <ion-drawer-vertical-handle />
 </ion-drawer-vertical-wrapper>
 	<ion-nav-buttons side="left"> <!-- left -->
-       <button ng-click="filter()" class="button button-icon icon ion-search"></button>
+       <button ng-click="filter()" class="button button-icon icon ion-search pad"></button>
     </ion-nav-buttons>
     <ion-nav-buttons side="right">
     <button class="button button-icon ion-navicon" ng-click="popover.show($event)"></button>
@@ -27,6 +31,7 @@
 	        <img ng-src="{{chat.face}}">
 	        <h2>{{chat.name}}</h2>
 	        <p>{{chat.lastText}}</p>
+          <span class="last-message-timestamp">{{chat.lastMessage.timestamp | calendar }}</span>
 	        <i class="icon ion-chevron-right icon-accessory"></i>
 	        <ion-delete-button class="ion-minus-circled" ng-click="remove(chat)"></ion-delete-button>
 	      </ion-item>

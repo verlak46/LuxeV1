@@ -91,7 +91,7 @@ angular.module('app.controllers', [])
     };
 
     $scope.goPing = function() {
-        $state.go("ping");
+        $state.go("categories");
         $scope.popover.hide();
     };
 
@@ -272,7 +272,59 @@ angular.module('app.controllers', [])
     };
 
     $scope.goPing = function() {
-        $state.go("ping");
+        $state.go("categories");
+        $scope.popover.hide();
+    };
+
+    $scope.goPayment = function() {
+        $state.go("wallet");
+        $scope.popover.hide();
+    };
+
+    $scope.goDetax = function() {
+        $state.go("detax");
+        $scope.popover.hide();
+    };
+
+    $scope.goFavorites = function() {
+        $state.go("favorites");
+        $scope.popover.hide();
+    };
+
+    $scope.goMyProfile = function() {
+        $state.go("myProfile");
+        $scope.popover.hide();
+    };
+
+    $scope.goSettings = function() {
+        $state.go("parameters");
+        $scope.popover.hide();
+    };
+
+    $ionicPopover.fromTemplateUrl('templates/popover.html', {
+        scope: $scope,
+    }).then(function(popover) {
+        $scope.popover = popover;
+    });
+
+    $scope.categorySelection= function(numCategory) {
+        DataFactory.setCategoryNumber(numCategory);
+        $state.go("brands");
+    };
+})
+
+.controller('categoriesCCtrl', function($scope, $state, $ionicPopover, DataFactory) {
+    $scope.categories = DataFactory.all();
+
+    // Popover links
+
+    $scope.goDeclare = function() {
+        $state.go("declare");
+        $scope.popover.hide();
+    };
+
+    $scope.goPing = function() {
+        $state.go("categories");
         $scope.popover.hide();
     };
 
@@ -326,7 +378,7 @@ angular.module('app.controllers', [])
     };
 
     $scope.goPing = function() {
-        $state.go("ping");
+        $state.go("categories");
         $scope.popover.hide();
     };
 
@@ -366,7 +418,7 @@ angular.module('app.controllers', [])
         $state.go("referenceAndSize");
     };
 })
-   
+
 .controller('referenceAndSizeCtrl', function($scope, $state, $ionicPopup, DataFactory) {
     $scope.categories = DataFactory.all();
     $scope.brand = DataFactory.getBrand();
@@ -417,7 +469,7 @@ angular.module('app.controllers', [])
     };
 
     $scope.goPing = function() {
-        $state.go("ping");
+        $state.go("categories");
         $scope.popover.hide();
     };
 
@@ -451,6 +503,24 @@ angular.module('app.controllers', [])
     }).then(function(popover) {
         $scope.popover = popover;
     });
+
+    // Ratings
+    $scope.ratingsObject = {
+        iconOn : 'ion-ios-star',
+        iconOff : 'ion-ios-star-outline',
+        iconOnColor: 'rgb(200, 200, 100)',
+        iconOffColor:  'rgb(200, 100, 100)',
+        rating:  2,
+        minRating:1,
+        callback: function(rating) {
+          $scope.ratingsCallback(rating);
+        }
+    };
+
+    $scope.ratingsCallback = function(rating) {
+        console.log('Selected rating is : ', rating);
+    };
+
 })
 
 .controller('ContactsCtrl', function($scope, $ionicFilterBar, $state, $ionicPopover) {
@@ -462,7 +532,7 @@ angular.module('app.controllers', [])
     };
 
     $scope.goPing = function() {
-        $state.go("ping");
+        $state.go("categories");
         $scope.popover.hide();
     };
 
@@ -496,6 +566,24 @@ angular.module('app.controllers', [])
     }).then(function(popover) {
         $scope.popover = popover;
     });
+
+    // Ratings
+    $scope.ratingsObject = {
+        iconOn : 'ion-ios-star',
+        iconOff : 'ion-ios-star-outline',
+        iconOnColor: 'rgb(200, 200, 100)',
+        iconOffColor:  'rgb(200, 100, 100)',
+        rating:  2,
+        minRating:1,
+        callback: function(rating) {
+          $scope.ratingsCallback(rating);
+        }
+    };
+
+    $scope.ratingsCallback = function(rating) {
+        console.log('Selected rating is : ', rating);
+    };
+
 
   $scope.filter = function() {
     $ionicFilterBar.show();
@@ -532,7 +620,7 @@ angular.module('app.controllers', [])
     };
 
     $scope.goPing = function() {
-        $state.go("ping");
+        $state.go("categories");
         $scope.popover.hide();
     };
 
@@ -584,6 +672,16 @@ angular.module('app.controllers', [])
     $scope.categorySelection = function(numCategoria) {
         DataFactory.setCategoryNumber(numCategoria);
         $state.go("findBrands");
+    };
+})
+
+.controller('findCategoriesCCtrl', function($scope, $state, DataFactory) {
+    $scope.categories = DataFactory.all();
+    $scope.categoryNumber = {};
+
+    $scope.categorySelection = function(numCategoria) {
+        DataFactory.setCategoryNumber(numCategoria);
+        $state.go("findBrandsC");
     };
 })
    
@@ -710,7 +808,7 @@ angular.module('app.controllers', [])
     };
 
     $scope.goPing = function() {
-        $state.go("ping");
+        $state.go("categories");
         $scope.popover.hide();
     };
 
@@ -796,7 +894,7 @@ angular.module('app.controllers', [])
     };
 
     $scope.goPing = function() {
-        $state.go("ping");
+        $state.go("categories");
         $scope.popover.hide();
     };
 
@@ -884,7 +982,7 @@ angular.module('app.controllers', [])
     };
 
     $scope.goPing = function() {
-        $state.go("ping");
+        $state.go("categories");
         $scope.popover.hide();
     };
 
@@ -930,4 +1028,19 @@ angular.module('app.controllers', [])
    
 .controller('propertiesCtrl', function($scope) {
 
-});
+})
+
+.filter('calendar', calendar);
+ 
+function calendar () {
+  return function (time) {
+    if (! time) return;
+ 
+    return moment(time).calendar(null, {
+      lastDay : 'DD/MM/YY',
+      sameDay : 'LT',
+      lastWeek : 'DD/MM/YY',
+      sameElse : 'DD/MM/YY'
+    });
+  };
+}

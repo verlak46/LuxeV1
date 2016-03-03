@@ -156,6 +156,14 @@ angular.module('app.routes', []).config(function($stateProvider, $urlRouterProvi
         url: '/findBrands',
         templateUrl: 'templates/findBrands.html',
         controller: 'findBrandsCtrl'
+    }).state('findCategoriesC', {
+        url: '/findCategoriesC',
+        templateUrl: 'templates/findCategoriesC.html',
+        controller: 'findCategoriesCCtrl'
+    }).state('findBrandsC', {
+        url: '/findBrandsC',
+        templateUrl: 'templates/findBrandsC.html',
+        controller: 'findBrandsCtrl'
     }).state('categories', {
         url: '/categories',
         templateUrl: 'templates/categories.html',
@@ -165,6 +173,7 @@ angular.module('app.routes', []).config(function($stateProvider, $urlRouterProvi
         templateUrl: 'templates/filterMarks.html',
         controller: 'filterMarksCtrl'
     });
+
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/inicio');
 });
