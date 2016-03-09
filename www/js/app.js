@@ -27,3 +27,5 @@ angular.module('app', ['ionic', 'ngCordova', 'ionic-ratings', 'ionic.contrib.dra
     $ionicConfigProvider.backButton.previousTitleText(false).text('');
 });
 
+a = moment("2016-03-19");
+a1 = moment();

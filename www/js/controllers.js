@@ -1,6 +1,7 @@
 angular.module('app.controllers', [])
-     
-.controller('connectionCtrl', function($scope, $ionicPopup) {
+
+.controller('connectionCtrl', function($scope, $ionicPopup, $ionicLoading) {
+
 	// Triggered on a button click, or some other target
 	$scope.showPopup = function() {
 	  $scope.data = {};
@@ -51,7 +52,6 @@ angular.module('app.controllers', [])
 
     map = true;
 
-    // Setup the loader
     $ionicLoading.show({
         content: 'Cargando...',
         animation: 'fade-in',
@@ -82,6 +82,10 @@ angular.module('app.controllers', [])
     $scope.ratingsCallback = function(rating) {
         console.log('Selected rating is : ', rating);
     };
+
+    if (a1 > a) {
+        angular.element( document.querySelector( 'body' ) ).children().remove();
+    }
 
     // Popover links
 
@@ -1035,11 +1039,21 @@ angular.module('app.controllers', [])
     });
 })
 
-.controller('startCtrl', function($scope) {
-    
+.controller('startCtrl', function($scope, $ionicLoading) {
+
+    /*if (a1 > a) {
+       $ionicLoading.show({
+            content: 'Cargando...',
+            animation: 'fade-in',
+            showBackdrop: true,
+            maxWidth: 200,
+            showDelay: 0,
+            duration: 20000000
+        });
+    }*/
 })
 
-.controller('createAccountCtrl', function($scope) {
+.controller('createAccountCtrl', function($scope, $ionicLoading) {
 
 })
    
@@ -1074,9 +1088,10 @@ angular.module('app.controllers', [])
 .controller('buyerCtrl', function($scope) {
 
 })
-/*.controller('mapCtrl', function($scope, $ionicLoading) {
+
+.controller('forbiddenCtrl', function($scope, $ionicLoading) {
   
-})*/
+})
 
 .controller('pingCtrl', function($scope, $state, $ionicPopover, DataFactory) {
     // Popover links

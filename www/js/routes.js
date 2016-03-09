@@ -57,10 +57,10 @@ angular.module('app.routes', []).config(function($stateProvider, $urlRouterProvi
         url: '/tutorial_vendedor',
         templateUrl: 'templates/tutorialSeller.html',
         controller: 'tutorialSellerCtrl'
-    }).state('map', {
-        url: '/mapa',
-        templateUrl: 'templates/map.html',
-        controller: 'mapCtrl'
+    }).state('forbidden', {
+        url: '/forbidden',
+        templateUrl: 'templates/forbidden.html',
+        controller: 'forbiddenCtrl'
     }).state('myProfile', {
         url: '/mi_perfil',
         templateUrl: 'templates/myProfile.html',
