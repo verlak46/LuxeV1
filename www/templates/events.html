@@ -1,5 +1,53 @@
 <ion-view style="" title="Events">
-    <ion-content padding="true">
-       Events
-    </ion-content>
+<ion-nav-buttons side="left">
+    <a href="#/main" class="tab-item"><img class="icon ion-chevron-left"></a>
+   </ion-nav-buttons>
+   <ion-nav-buttons side="right">
+    <button class="button button-icon ion-navicon" ng-click="popover.show($event)"></button>
+   </ion-nav-buttons>
+        <ion-tabs class="tabs-striped tabs-top tabs-background-stable tabs-color-dark">
+            <ion-tab title="Map">
+                <ion-nav-view name="Map">
+                    <ion-content scroll="false" data-tap-disabled="true">
+                        <ui-gmap-google-map center='map.center' zoom='map.zoom' options="map.options">
+                            <ui-gmap-markers models="randomMarkers" coords="'self'" click="onClick">
+                                <ui-gmap-windows show="'show'">
+                                    <div ng-non-bindable class="window">
+                                        <p class="titlewindow">{{categorie}}</p>
+                                        <p class="descriptionwindow">
+                                            {{description}}</p>
+                                        <img class="imagewindow" src="{{image}}" />
+                                    </div>
+                                </ui-gmap-windows>
+                            </ui-gmap-markers </ui-gmap-google-map>
+                    </ion-content>
+                </ion-nav-view>
+            </ion-tab>
+            <ion-tab title="List">
+                <ion-nav-view name="List">
+                    <ion-content>
+                        <a class="item item-thumbnail-left" href="#">
+                            <img src="img/favoritos/paris-fashion.jpg">
+                            <h2>Fashion</h2>
+                            <h3>Paris Fashion Week 2016</h3>
+                            <p>14/04/2016 to 21/04/2016</p>
+                            <p>Paris Fashion Week is a clothing trade show held biannually in Paris, France with spring/summer and autumn/winter events held each year.</p>
+                        </a>
+                        <a class="item item-thumbnail-left" href="#">
+                            <img src="img/159155_logo_luxurybe2.jpg">
+                            <h2>Event</h2>
+                            <h3>Luxury Blogger II Edition</h3>
+                            <p>13/03/2016 23:00</p>
+                            <p>Event organized by Luxury Hotel VP Madroño running this summer at the Dongdaemun Design Plaza in Seoul</p>
+                        </a>
+                        <a class="item item-thumbnail-left" href="#">
+                            <img src="img/Dior-Paris-fashion-week5.jpg">
+                            <h2>Fashion</h2>
+                            <h3>Dior Fall collection</h3>
+                            <p>13/05/2016 17:00</p>
+                            <p>Invited by the House to deliver his own interpretation of the Dior spirit for the Esprit Dior exhibition running this summer at the Dongdaemun Design Plaza in Seoul</p>
+                        </a>
+                    </ion-content>
+                </ion-nav-view>
+            </ion-tab>
 </ion-view>

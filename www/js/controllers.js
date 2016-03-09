@@ -160,6 +160,111 @@ angular.module('app.controllers', [])
     });*/
 })
 
+.controller('eventsCtrl', function($scope, $ionicLoading, $ionicPopover, $state) {
+    // Setup the loader
+    $ionicLoading.show({
+        content: 'Cargando...',
+        animation: 'fade-in',
+        showBackdrop: true,
+        maxWidth: 200,
+        showDelay: 0,
+        duration: 2000
+    });
+
+    // Popover links
+
+    $scope.goDeclare = function() {
+        $state.go("declare");
+        $scope.popover.hide();
+    };
+
+    $scope.goPing = function() {
+        $state.go("categories");
+        $scope.popover.hide();
+    };
+
+    $scope.goPayment = function() {
+        $state.go("wallet");
+        $scope.popover.hide();
+    };
+
+    $scope.goDetax = function() {
+        $state.go("detax");
+        $scope.popover.hide();
+    };
+
+    $scope.goFavorites = function() {
+        $state.go("favorites");
+        $scope.popover.hide();
+    };
+
+    $scope.goMyProfile = function() {
+        $state.go("myProfile");
+        $scope.popover.hide();
+    };
+
+    $scope.goSettings = function() {
+        $state.go("parameters");
+        $scope.popover.hide();
+    };
+
+    $ionicPopover.fromTemplateUrl('templates/popover.html', {
+        scope: $scope,
+    }).then(function(popover) {
+        $scope.popover = popover;
+    });
+
+    var markers = [{
+                id: 1,
+                idKey: "id",
+                latitude: 48.8534100,
+                longitude: 2.3488000,
+                description: 'Paris Fashion Week 2016',
+                categorie: 'Fashion',
+                image: 'img/favoritos/paris-fashion.jpg',
+                show: false,
+                },
+                {
+                id: 2,
+                idKey: "id",
+                latitude: 48.8134100,
+                longitude: 2.3288000,
+                description: 'Luxury Blogger II Edition',
+                categorie: 'Event',
+                image: 'img/159155_logo_luxurybe2.jpg',
+                show: false,
+                },
+                {
+                id: 3,
+                idKey: "id",
+                latitude: 48.880691,
+                longitude: 2.375450,
+                description: 'Dior Fall collection',
+                categorie: 'Fashion',
+                image: 'img/Dior-Paris-fashion-week5.jpg',
+                show: false,
+                }];
+    // Map
+
+    $scope.map = {
+        center: {
+            latitude: 48.8534100,
+            longitude: 2.3488000
+        },
+        zoom: 11,
+        options: {
+            zoomControl: false
+        }
+    };
+
+    $scope.randomMarkers = markers;
+
+    $scope.onClick = function(marker, eventName, model) {
+        model.show = !model.show;
+    };
+    
+})
+
 .controller('tutorialBuyerCtrl', function($scope) {
     //SLIDER
     $scope.selector = [{

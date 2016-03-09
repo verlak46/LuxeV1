@@ -131,7 +131,8 @@ angular.module('app.routes', []).config(function($stateProvider, $urlRouterProvi
         templateUrl: 'templates/sellOut.html'
     }).state('events', {
         url: '/events',
-        templateUrl: 'templates/events.html'
+        templateUrl: 'templates/events.html',
+        controller: 'eventsCtrl'
     }).state('favorites', {
         url: '/favorites',
         templateUrl: 'templates/favorites.html',
