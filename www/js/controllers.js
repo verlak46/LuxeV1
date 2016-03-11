@@ -907,7 +907,19 @@ angular.module('app.controllers', [])
     $scope.emailNotification = 'Subscribed';
 })
 
-.controller("photoCtrl", function($scope, $ionicPopover, $state) {
+.controller("photoCtrl", function($scope, $ionicPopover, $state, $ionicLoading, PhotoFactory) {
+
+    // Setup the loader
+    $ionicLoading.show({
+        content: 'Cargando...',
+        animation: 'fade-in',
+        showBackdrop: true,
+        maxWidth: 200,
+        showDelay: 0,
+        duration: 2000
+    });
+
+    $scope.photos = PhotoFactory.all();
 
     // Popover links
 
@@ -952,35 +964,54 @@ angular.module('app.controllers', [])
         $scope.popover = popover;
     });
 
-    $scope.photos = [{
-        title: "Gold Coast RC 11",
-        category: "Boat",
-        img: 'img/photos/boat.jpg'
-    }, {
-        title: "Hotel continental luxe",
-        category: "Hotel",
-        img: 'img/photos/continental.jpg'
-    }, {
-        title: "Diamond",
-        category: "Jewelry",
-        img: 'img/photos/diamond.jpg'
-    }, {
-        title: "Hardrock luxe Hotel",
-        category: "Hotel",
-        img: 'img/photos/hardrock.jpg'
-    }, {
-        title: "Private jet",
-        category: "Jet",
-        img: 'img/photos/jet.jpg'
-    }, {
-        title: "Masserati",
-        category: "Cars",
-        img: 'img/photos/maserati.jpg'
-    }, {
-        title: "Bugatti",
-        category: "Cars",
-        img: 'img/photos/bugatti.jpg'
-    }];
+    var markers = [{
+                id: 1,
+                idKey: "id",
+                latitude: 48.8534100,
+                longitude: 2.3488000,
+                description: 'Straight out of a collection, never tracked.',
+                categorie: 'Ferrari',
+                image: 'img/favoritos/fer1.jpg',
+                show: false,
+                },
+                {
+                id: 2,
+                idKey: "id",
+                latitude: 48.8134100,
+                longitude: 2.3288000,
+                description: 'One of the lowest mileage F430 Spiders available in the US right now.',
+                categorie: 'Ferrari',
+                image: 'img/favoritos/fer4301.jpg',
+                show: false,
+                },
+                {
+                id: 3,
+                idKey: "id",
+                latitude: 48.880691,
+                longitude: 2.375450,
+                description: 'Best plane ever',
+                categorie: 'Cesna',
+                image: 'img/favoritos/plane1.jpg',
+                show: false,
+                }];
+    // Map
+
+    $scope.map = {
+        center: {
+            latitude: 48.8534100,
+            longitude: 2.3488000
+        },
+        zoom: 11,
+        options: {
+            zoomControl: false
+        }
+    };
+
+    $scope.randomMarkers = markers;
+
+    $scope.onClick = function(marker, eventName, model) {
+        model.show = !model.show;
+    };
 })
 
 .controller('luxusAdvisorCtrl', function($scope, $ionicPopover, $state) {

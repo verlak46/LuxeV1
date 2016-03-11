@@ -1,16 +1,136 @@
 <ion-view style="" title="Pic publisher">
-<ion-nav-buttons side="right">
-    <button class="button button-icon ion-navicon" ng-click="popover.show($event)"></button>
-   </ion-nav-buttons>
-    <ion-content >
-        <ion-list>
-            <div class="list card">
-                <a ng-repeat="photo in photos" class="item item-thumbnail-right" href="#">
-                    <img ng-src="{{photo.img}}">
-                    <h2>{{photo.title}}</h2>
-                    <p>{{photo.category}}</p>
-                </a>
-            </div>
-        </ion-list>
-    </ion-content>
+    <ion-nav-buttons side="left">
+        <a href="#/main" class="tab-item"><img class="icon ion-chevron-left"></a>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button class="button button-icon ion-navicon" ng-click="popover.show($event)"></button>
+    </ion-nav-buttons>
+    <ion-tabs class="tabs-striped tabs-background-stable tabs-color-dark">
+        <ion-tab title="Pic publisher">
+            <ion-nav-view name="Publisher">
+                <ion-tabs class="tabs-striped tabs-top tabs-background-stable tabs-color-dark">
+                    <ion-tab title="Map">
+                        <ion-nav-view name="Map">
+                            <ion-content scroll="false" data-tap-disabled="true">
+                                <ui-gmap-google-map center='map.center' zoom='map.zoom' options="map.options">
+                                    <ui-gmap-markers models="randomMarkers" coords="'self'" click="onClick">
+                                        <ui-gmap-windows show="'show'">
+                                            <div ng-non-bindable class="window">
+                                                <p class="titlewindow">{{categorie}}</p>
+                                                <p class="descriptionwindow">
+                                                    {{description}}</p>
+                                                <img class="imagewindow" src="{{image}}" />
+                                            </div>
+                                        </ui-gmap-windows>
+                                    </ui-gmap-markers>
+                                </ui-gmap-google-map>
+                            </ion-content>
+                        </ion-nav-view>
+                    </ion-tab>
+                    <ion-tab title="List">
+                        <ion-nav-view name="List">
+                            <ion-content>
+                                <ion-list>
+                                    <div class="list card" ng-repeat="photo in photos">
+                                        <div class="item item-avatar">
+                                            <img ng-src="{{photo.images.url1}}">
+                                            <h2>{{photo.title}}</h2>
+                                            <p>{{photo.reference}}</p>
+                                            <p>{{photo.date}}</p>
+                                        </div>
+                                        <div class="item item-body">
+                                            <img class="full-image" ng-src="{{photo.images.url1}}">
+                                            <p>
+                                                <p>Price: {{photo.price}} €</p>
+                                                <p>{{photo.description}}</p>
+                                            </p>
+                                            <p>
+                                                <a href="#" class="subdued">1 Like</a>
+                                                <a href="#" class="subdued">5 Comments</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </ion-list>
+                            </ion-content>
+                        </ion-nav-view>
+                    </ion-tab>
+            </ion-nav-view>
+        </ion-tab>
+        <ion-tab title="Post picture">
+            <ion-nav-view name="Publisher">
+                <ion-content>
+                    <div class="list card">
+                        <div class="item item-divider" style="text-align:center">
+                            <i class="ion-images"></i> Picture
+                        </div>
+                        <a class="item item-list-detail" ng-click="openModal(1)" style="height:150px; text-align:center">
+                            <div class="bar bar-footer bar-stable" ng-show="imgURI === undefined">
+                                <div class="title">Add picture</div>
+                            </div>
+                            <img ng-show="imgURI !== undefined" ng-src="{{imgURI}}" style="height:130px; padding: 5px 5px 5px 5px;">
+                        </a>
+                    </div>
+                    <div class="list">
+                        <label class="item item-input">
+                            <span class="input-label">
+                    <strong>Sector</strong>
+                </span>
+                            <input type="text" />
+                        </label>
+                        <label class="item item-input">
+                            <span class="input-label">
+                    <strong>Brand</strong>
+                </span>
+                            <input type="text" />
+                        </label>
+                        <label class="item item-input">
+                            <span class="input-label">
+                    <strong>Reference</strong>
+                </span>
+                            <input type="text" />
+                        </label>
+                        <label class="item item-input">
+                            <span class="input-label">
+                    <strong>Price</strong>
+                </span>
+                            <input type="number" />
+                        </label>
+                        <label class="item"><strong>City</strong> Paris</label>
+                        <label class="item"><strong>Date</strong> 11/03/2016</label>
+                        <label class="item item-input">
+                            <span class="input-label">
+                    <strong>Comment</strong>
+                </span>
+                            <textarea rows="5" name="description" maxlength="500"></textarea>
+                        </label>
+                    </div>
+                    <div class="padding text-center">
+                        <button class="button button-stable">
+                            Publish
+                        </button>
+                    </div>
+                    <div style="padding-top: 50px;">
+                    </div>
+                </ion-content>
+            </ion-nav-view>
+        </ion-tab>
+        <ion-tab title="My pictures">
+            <ion-nav-view name="Publisher">
+                <ion-content>
+                    <ion-list>
+                        <div class="list card">
+                            <a class="item item-thumbnail-right" ng-repeat="photo in photos" href="#/photo/{{photo.id}}">
+                                <img ng-src="{{photo.images.url1}}">
+                                <h2>{{photo.title}}</h2>
+                                <h3>{{photo.reference}}</h3>
+                                <p>{{photo.date}}</p>
+                                <p>{{photo.description}}</p>
+                                <p><b>Price:</b> {{photo.price}} €</p>
+                            </a>
+                        </div>
+                    </ion-list>
+                </ion-content>
+            </ion-nav-view>
+        </ion-tab>
+        </ion-tabs>
 </ion-view>

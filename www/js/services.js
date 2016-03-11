@@ -652,6 +652,62 @@ angular.module('app.services', [])
     };
 })
 
+.factory('PhotoFactory', function() {
+    var photo = [{
+            id: 0,
+            title: 'Ferrari',
+            reference: 'F430 Spider',
+            date: '13/02/2016',
+            description: 'Straight out of a collection, never tracked.',
+            price: '164900',
+            images: {
+                url1: 'img/favoritos/fer1.jpg',
+                url2: 'img/favoritos/fer2.jpg',
+                url3: 'img/favoritos/fer3.jpg'
+            }
+        }, {
+            id: 1,
+            title: 'Ferrari',
+            reference: 'F430 Berlinetta',
+            date: '03/12/2015',
+            description: 'One of the lowest mileage F430 Spiders available in the US right now.',
+            price: '164900',
+            images: {
+                url1: 'img/favoritos/fer4301.jpg',
+                url2: 'img/favoritos/fer4302.jpg',
+                url3: 'img/favoritos/fer4302.jpg'
+            }
+        }, {
+            id: 2,
+            title: 'Cessna',
+            reference: 'Citation X',
+            date: '11/11/2015',
+            description: 'Best plane ever',
+            price: '1234900',
+            images: {
+                url1: 'img/favoritos/plane1.jpg',
+                url2: 'img/favoritos/plane2.jpg',
+                url3: 'img/favoritos/plane3.jpg'
+            }
+        }
+    ];
+
+    return {
+
+        all: function() {
+            return photo;
+        },
+        get: function(photoId) {
+            for (var i = 0; i < photo.length; i++) {
+                if (photo[i].id === parseInt(photoId)) {
+                    return photo[i];
+                }
+            }
+            return null;
+        }
+    };
+})
+
 .factory('StoresFactory', function() {
     var stores = [{
             id: 0,

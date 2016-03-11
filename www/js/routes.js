@@ -103,6 +103,10 @@ angular.module('app.routes', []).config(function($stateProvider, $urlRouterProvi
         url: '/photo',
         templateUrl: 'templates/photo.html',
         controller: 'photoCtrl'
+    }).state('photodetail', {
+        url: '/photo/:photoId',
+        templateUrl: 'templates/photo-detail.html',
+        controller: 'photoDetailCtrl'
     }).state('chats', {
         url: '/chats',
         templateUrl: 'templates/chats.html',
