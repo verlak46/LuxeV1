@@ -176,3 +176,12 @@ opacity: 0.4;
 .active .ion-shop {
     content: url('../img/store.png') !important;
 }
+
+/*.hermes-slide {
+    padding-top: 10px !important;
+}*/
+
+.hermes {
+    height: 100%;
+    widht: 100%;
+}

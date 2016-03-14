@@ -1014,16 +1014,36 @@ angular.module('app.controllers', [])
     };
 })
 
-.controller('luxusAdvisorCtrl', function($scope, $ionicPopover, $state) {
+.controller('luxusAdvisorCtrl', function($scope, $ionicPopover, $state, $ionicLoading) {
+
+    $ionicLoading.show({
+        content: 'Cargando...',
+        animation: 'fade-in',
+        showBackdrop: true,
+        maxWidth: 200,
+        showDelay: 0,
+        duration: 2000
+    });
 
     $scope.rates = [{
         name: "Louis Vuitton",
-        category: "Store",
+        city: "Paris",
+        address: "Rue Geoffroy-Saint-Hilaire",
+        description: 'Explore the World of Louis Vuitton, read our latest News, discover our Women and Men Collections and locate',
         img: 'img/agent-store/6.jpg'
     }, {
         name: "Chanel",
-        category: "Store",
+        city: "Paris",
+        address: "Rue Censier",
+        description: "CHANEL Fine Jewellery creations are inspired by the bold character of Mademoiselle Chanel’s.",
         img: 'img/agent-store/7.jpg'
+    },
+    {
+        name: "Givenchy",
+        city: "Paris",
+        address: "Rue Réaumur",
+        description: "Discover the Givenchy Women, Men and Accessories collections, and explore the history of the Haute Couture House",
+        img: 'img/stores/given1.jpg'
     }];
 
     // Popover links
@@ -1068,6 +1088,72 @@ angular.module('app.controllers', [])
     }).then(function(popover) {
         $scope.popover = popover;
     });
+
+    // Ratings
+    $scope.ratingsObject = {
+        iconOn : 'ion-ios-star',
+        iconOff : 'ion-ios-star-outline',
+        iconOnColor: 'rgb(200, 200, 100)',
+        iconOffColor:  'rgb(200, 100, 100)',
+        rating:  2,
+        minRating:1,
+        callback: function(rating) {
+          $scope.ratingsCallback(rating);
+        }
+    };
+
+    $scope.ratingsCallback = function(rating) {
+        console.log('Selected rating is : ', rating);
+    };
+
+    var markers = [{
+                id: 1,
+                idKey: "id",
+                latitude: 48.8534100,
+                longitude: 2.3488000,
+                description: 'Straight out of a collection, never tracked.',
+                categorie: 'Louis Vuitton',
+                image: 'img/agent-store/6.jpg',
+                show: false,
+                },
+                {
+                id: 2,
+                idKey: "id",
+                latitude: 48.8134100,
+                longitude: 2.3288000,
+                description: 'Straight out of a collection, never tracked.',
+                categorie: 'Chanel',
+                image: 'img/agent-store/7.jpg',
+                show: false,
+                },
+                {
+                id: 3,
+                idKey: "id",
+                latitude: 48.880691,
+                longitude: 2.375450,
+                description: 'Straight out of a collection, never tracked.',
+                categorie: 'Givenchy',
+                image: 'img/stores/given1.jpg',
+                show: false,
+                }];
+    // Map
+
+    $scope.map = {
+        center: {
+            latitude: 48.8534100,
+            longitude: 2.3488000
+        },
+        zoom: 11,
+        options: {
+            zoomControl: false
+        }
+    };
+
+    $scope.randomMarkers = markers;
+
+    $scope.onClick = function(marker, eventName, model) {
+        model.show = !model.show;
+    };
 })
 
 .controller('startCtrl', function($scope, $ionicLoading) {

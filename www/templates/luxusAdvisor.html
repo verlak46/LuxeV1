@@ -1,8 +1,32 @@
 <ion-view style="" title="Store advisor">
-<ion-nav-buttons side="right">
-    <button class="button button-icon ion-navicon" ng-click="popover.show($event)"></button>
-   </ion-nav-buttons>
-    <ion-content>
+    <ion-drawer-vertical-wrapper class="has-header" direction="down" state="closed">
+        <ion-drawer-vertical-content>
+            <label class="item item-input">
+                <i class="icon ion-search placeholder-icon"></i>
+                <input type="text" placeholder="Search">
+            </label>
+            <label class="item item-select">
+                <select class="city">
+                    <option>Milan</option>
+                    <option selected>Paris</option>
+                    <option>France</option>
+                </select>
+            </label>
+            <div class="row" style="background-color: white">
+                <div class="col">
+                    <ionic-ratings ratingsobj='ratingsObject'></ionic-ratings>
+                </div>
+            </div>
+        </ion-drawer-vertical-content>
+        <ion-drawer-vertical-handle />
+    </ion-drawer-vertical-wrapper>
+    <ion-nav-buttons side="left">
+        <a href="#/findCategoriesC" class="tab-item"><img class="icon ion-home pad" src="img/iconcategory/icon_search.png"></a>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button class="button button-icon ion-navicon" ng-click="popover.show($event)"></button>
+    </ion-nav-buttons>
+    <!--<ion-content>
         <ion-list>
             <a ng-repeat="rate in rates" class="item item-thumbnail-left">
                 <img ng-src="{{rate.img}}">
@@ -17,5 +41,192 @@
                 </div>
             </a>
         </ion-list>
-    </ion-content>
+    </ion-content>-->
+    <ion-tabs class="tabs-striped tabs-background-stable tabs-color-dark">
+        <ion-tab title="Store Advisor">
+            <ion-nav-view name="Store Advisor">
+                <ion-tabs class="tabs-striped tabs-top tabs-background-stable tabs-color-dark">
+                    <ion-tab title="Map">
+                        <ion-nav-view name="Map">
+                            <ion-content scroll="false" data-tap-disabled="true">
+                                <ui-gmap-google-map center='map.center' zoom='map.zoom' options="map.options">
+                                    <ui-gmap-markers models="randomMarkers" coords="'self'" click="onClick">
+                                        <ui-gmap-windows show="'show'">
+                                            <div ng-non-bindable class="window">
+                                                <p class="titlewindow">{{categorie}}</p>
+                                                <p class="descriptionwindow">
+                                                    {{description}}</p>
+                                                <img class="imagewindow" src="{{image}}" />
+                                            </div>
+                                        </ui-gmap-windows>
+                                    </ui-gmap-markers>
+                                </ui-gmap-google-map>
+                            </ion-content>
+                        </ion-nav-view>
+                    </ion-tab>
+                    <ion-tab title="List">
+                        <ion-nav-view name="List">
+                            <ion-content>
+                                <ion-list>
+                                    <div class="list card" ng-repeat="rate in rates">
+                                        <div class="item item-avatar">
+                                            <img ng-src="{{rate.img}}">
+                                            <h2>{{rate.name}}</h2>
+                                            <h3>{{rate.city}}</h3>
+                                            <p>{{rate.address}}</p>
+                                            <div class="rating">
+                                                <i class="icon ion-star"></i>
+                                                <i class="icon ion-star"></i>
+                                                <i class="icon ion-star"></i>
+                                                <i class="icon ion-star"></i>
+                                                <i class="icon ion-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="item item-body">
+                                            <img class="full-image" ng-src="{{rate.img}}">
+                                            <p>
+                                                <p>{{rate.description}}</p>
+                                            </p>
+                                            <p>
+                                                <a href="#" class="subdued">1 Like</a>
+                                                <a href="#" class="subdued">5 Comments</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </ion-list>
+                                <div style="padding-top: 50px;">
+                                </div>
+                            </ion-content>
+                        </ion-nav-view>
+                    </ion-tab>
+            </ion-nav-view>
+        </ion-tab>
+        <ion-tab title="Notation">
+            <ion-nav-view name="Notation">
+                <ion-content>
+                    <div class="card">
+                        <div class="item item-text-wrap">
+                            <p><strong>Hermès</strong></p>
+                            <p>Fashion & Leather Goods</p>
+                            <p>
+                                <i class="icon ion-star"></i>
+                                <i class="icon ion-star"></i>
+                                <i class="icon ion-star"></i>
+                                <i class="icon ion-star"></i>
+                                <i class="icon ion-star"></i>
+                            </p>
+                            <p>299 comments</p>
+                            <p>Discover Hermès and shop our universe of silk scarves & ties, leather bags, watches, accessories, men's & women's ready to wear, shoes and furniture.</p>
+                            <a style="" class="button button-stable icon-right ion-location" href="">Map</a>
+                            <a style="" class="button button-stable icon-right ion-ios-telephone" href="">Phone</a>
+                            <a style="" class="button button-stable icon-right ion-heart" href="">Save</a>
+                            <div class="row">
+                                <div class="col">
+                                    <label class="item item-input">
+                                        What did you think?
+                                    </label>
+                                </div>
+                                <div class="col">
+                                    <ionic-ratings ratingsobj='ratingsObject'></ionic-ratings>
+                                </div>
+                            </div>
+                            <ion-slide-box on-slide-changed="slideHasChanged($index)">
+                                <ion-slide class="small">
+                                    <img src="img/hermes1.png" />
+                                </ion-slide>
+                                <ion-slide class="small">
+                                    <img src="img/hermes2.jpg" />
+                                </ion-slide>
+                                <ion-slide class="small">
+                                    <img src="img/hermes1.png" />
+                                </ion-slide>
+                            </ion-slide-box>
+                            </br>
+                            <a style="" class="button button-stable button-block icon-right ion-person" href="">Contact seller 1</a>
+                            <a style="" class="button button-stable button-block icon-right ion-person" href="">Contact seller 2</a>
+                            </br>
+                            </br>
+                            <p><strong>Last comments</strong></p>
+                            <div class="list card">
+                                <p style="text-align:right">12/03/2016</p>
+                                <label>blablablabla
+                                    <p style="text-align:right">Milo James - Final Customer</p>
+                                </label>
+                            </div>
+                            <div class="list card">
+                                <label>
+                                    <p style="text-align:right">17/02/2016</p>blablablablablablablablablablablablablablablablablablablabla
+                                    <p style="text-align:right">Lena Davis - Final Customer</p>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </ion-content>
+            </ion-nav-view>
+        </ion-tab>
+        <ion-tab title="Draft">
+            <ion-nav-view name="Draft">
+                <ion-content>
+                    <div class="card">
+                        <div class="item item-text-wrap">
+                            <ion-item class="item-thumbnail-left">
+                                <img src="img/v5MCGDhARZeKf98UYt2f_perry.png">
+                                <h2>Comarat Eric</h2>
+                                <p>Tokyo</p>
+                                <p>Japan</p>
+                            </ion-item>
+                            <div class="list card">
+                                <div class="item item-avatar">
+                                    <img src="img/hermes1.png">
+                                    <h2>Hermès</h2>
+                                    <p>Received a notice on March 05, 2016</p>
+                                </div>
+                                <div class="item item-body">
+                                    <strong>"A wonderful place"</strong>
+                                    <p><i class="icon ion-star"></i><i class="icon ion-star"></i><i class="icon ion-star"></i><i class="icon ion-star"></i><i class="icon ion-star"></i></p>
+                                    <p>
+                                        Belonging to the group is the crystal glass manufacturer Saint-Louis, the oldest crystal company in the world. Since its origin in 1586, Saint-Louis has drawn its inspiration from the great decorative periods of the 19th and 20th century, from Restoration to Modern Style, going through Napoléon III, Art Nouveau and Art Deco – the true essence of its identity. Saint-Louis became one of the Hermès Group Métiers in 1989.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ion-content>
+            </ion-nav-view>
+        </ion-tab>
+        <ion-tab title="Me">
+            <ion-nav-view name="Me">
+                <ion-content>
+                    <ion-item class="item-thumbnail-left">
+                        <img src="img/v5MCGDhARZeKf98UYt2f_perry.png">
+                        <h2>Comarat Eric</h2>
+                        <p>Member Plus since 2016</p>
+                    </ion-item>
+                    <div class="row">
+                        <div class="col col-20" style="border: think solid #f8f8f8;"><strong>1 city</strong></div>
+                        <div class="col col-20" style="border: think solid #f8f8f8;"><strong>1 avis</strong></div>
+                        <div class="col col-20" style="border: think solid #f8f8f8;"><strong>10 photos</strong></div>
+                        <div class="col col-20" style="border: think solid #f8f8f8;"><strong>100 points</strong></div>
+                        <div class="col col-20" style="border: think solid #f8f8f8;"><strong>3 badges</strong></div>
+                    </div>
+                    <div class="list list-inset">
+                        <label class="item item-input">
+                            <i class="icon ion-search placeholder-icon"></i>
+                            <input type="text" placeholder="Search">
+                        </label>
+                    </div>
+                    <ion-item class="item-thumbnail-left">
+                        <img src="img/tokyo.jpg">
+                        <h2>Tokyo 1</h2>
+                        <p>Japan</p>
+                    </ion-item>
+                    <ion-item class="item-thumbnail-left">
+                        <img src="img/china.jpg">
+                        <h2>Hong Kong 1</h2>
+                        <p>China</p>
+                    </ion-item>
+                </ion-content>
+            </ion-nav-view>
+        </ion-tab>
+        </ion-tabs>
 </ion-view>
