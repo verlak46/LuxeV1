@@ -21,7 +21,7 @@
         <ion-drawer-vertical-handle />
     </ion-drawer-vertical-wrapper>
     <ion-nav-buttons side="left">
-        <a href="#/findCategoriesC" class="tab-item"><img class="icon ion-home pad" src="img/iconcategory/icon_search.png"></a>
+        <a href="#/findCategoriesS" class="tab-item"><img class="icon ion-home pad" src="img/iconcategory/icon_search.png"></a>
     </ion-nav-buttons>
     <ion-nav-buttons side="right">
         <button class="button button-icon ion-navicon" ng-click="popover.show($event)"></button>
@@ -101,8 +101,8 @@
                     </ion-tab>
             </ion-nav-view>
         </ion-tab>
-        <ion-tab title="Notation">
-            <ion-nav-view name="Notation">
+        <ion-tab title="Write opinions">
+            <ion-nav-view name="Write opinions">
                 <ion-content>
                     <div class="card">
                         <div class="item item-text-wrap">
@@ -164,8 +164,8 @@
                 </ion-content>
             </ion-nav-view>
         </ion-tab>
-        <ion-tab title="Draft">
-            <ion-nav-view name="Draft">
+        <ion-tab title="Opinion draft">
+            <ion-nav-view name="Opinion draft">
                 <ion-content>
                     <div class="card">
                         <div class="item item-text-wrap">
@@ -215,15 +215,17 @@
                             <input type="text" placeholder="Search">
                         </label>
                     </div>
-                    <ion-item class="item-thumbnail-left">
+                    <ion-item class="item-thumbnail-left item-icon-right">
                         <img src="img/tokyo.jpg">
                         <h2>Tokyo 1</h2>
                         <p>Japan</p>
+                        <i class="icon ion-chevron-right"></i>
                     </ion-item>
-                    <ion-item class="item-thumbnail-left">
+                    <ion-item class="item-thumbnail-left item-icon-right">
                         <img src="img/china.jpg">
                         <h2>Hong Kong 1</h2>
                         <p>China</p>
+                        <i class="icon ion-chevron-right"></i>
                     </ion-item>
                 </ion-content>
             </ion-nav-view>

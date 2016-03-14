@@ -793,6 +793,16 @@ angular.module('app.controllers', [])
         $state.go("findBrandsC");
     };
 })
+
+.controller('findCategoriesSCtrl', function($scope, $state, DataFactory) {
+    $scope.categories = DataFactory.all();
+    $scope.categoryNumber = {};
+
+    $scope.categorySelection = function(numCategoria) {
+        DataFactory.setCategoryNumber(numCategoria);
+        $state.go("findBrandsS");
+    };
+})
    
 .controller('findBrandsCtrl', function($scope, $state, DataFactory, GetMarksFactory) {
     $scope.categories = DataFactory.all();
@@ -1111,7 +1121,7 @@ angular.module('app.controllers', [])
                 idKey: "id",
                 latitude: 48.8534100,
                 longitude: 2.3488000,
-                description: 'Straight out of a collection, never tracked.',
+                description: 'Explore the World of Louis Vuitton, read our latest News, discover our Women and Men Collections and locate.',
                 categorie: 'Louis Vuitton',
                 image: 'img/agent-store/6.jpg',
                 show: false,
@@ -1121,7 +1131,7 @@ angular.module('app.controllers', [])
                 idKey: "id",
                 latitude: 48.8134100,
                 longitude: 2.3288000,
-                description: 'Straight out of a collection, never tracked.',
+                description: 'CHANEL Fine Jewellery creations are inspired by the bold character of Mademoiselle Chanel’s.',
                 categorie: 'Chanel',
                 image: 'img/agent-store/7.jpg',
                 show: false,
@@ -1131,7 +1141,7 @@ angular.module('app.controllers', [])
                 idKey: "id",
                 latitude: 48.880691,
                 longitude: 2.375450,
-                description: 'Straight out of a collection, never tracked.',
+                description: 'Discover the Givenchy Women, Men and Accessories collections, and explore the history of the Haute Couture House.',
                 categorie: 'Givenchy',
                 image: 'img/stores/given1.jpg',
                 show: false,

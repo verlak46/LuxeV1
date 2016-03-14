@@ -169,6 +169,14 @@ angular.module('app.routes', []).config(function($stateProvider, $urlRouterProvi
         url: '/findBrandsC',
         templateUrl: 'templates/findBrandsC.html',
         controller: 'findBrandsCtrl'
+    }).state('findCategoriesS', {
+        url: '/findCategoriesS',
+        templateUrl: 'templates/findCategoriesS.html',
+        controller: 'findCategoriesSCtrl'
+    }).state('findBrandsS', {
+        url: '/findBrandsS',
+        templateUrl: 'templates/findBrandsS.html',
+        controller: 'findBrandsCtrl'
     }).state('categories', {
         url: '/categories',
         templateUrl: 'templates/categories.html',
