@@ -949,6 +949,12 @@ angular.module('app.controllers', [])
         duration: 2000
     });
 
+    $scope.myTitleVar= "Pictures publisher";
+
+    $scope.change = function(value) {
+        $scope.myTitleVar=value;
+    };
+
     $scope.photos = PhotoFactory.all();
 
     // Popover links
@@ -1054,6 +1060,12 @@ angular.module('app.controllers', [])
         showDelay: 0,
         duration: 2000
     });
+
+    $scope.myTitleVar= "Store Advisor";
+
+    $scope.change = function(value) {
+        $scope.myTitleVar=value;
+    };
 
     $scope.rates = [{
         name: "Louis Vuitton",

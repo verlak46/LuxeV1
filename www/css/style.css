@@ -123,7 +123,7 @@
 /* Popover */
 
 .popover-menu {
-    height: 505px;
+    height: 505px !important;
     /*background-color: #222 !important;
     opacity: 0.9 !important;
     /*width: 160px;*/
@@ -168,14 +168,14 @@ ion-drawer-vertical-handle {
     color: #9A9898;
 }
 
-.ion-shop:before {
+/*.ion-shop:before {
 content: url('../img/store.png') !important; 
 opacity: 0.4;
 }
 
 .active .ion-shop {
     content: url('../img/store.png') !important;
-}
+}*/
 
 /*.hermes-slide {
     padding-top: 10px !important;
