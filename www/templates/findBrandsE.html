@@ -1,0 +1,17 @@
+<ion-view style="" title="Brands">
+	<ion-nav-buttons side="right">
+      <a class="button button-clear button-positive" href="#/events">
+	      Done
+	    </a>
+  	</ion-nav-buttons>
+    <ion-content>
+       <ion-list>
+       <ion-checkbox class="item-checkbox-right" ng-repeat="brand in categories[categoryNumber].brands" ng-model="item.checked" ng-checked="item.checked">
+            <ion-item class="item-avatar" type="item-text-wrap" ng-click="sizeSelection()">
+                    {{brand.brandName}}
+                    <img src="img/photo.jpg">
+       		</ion-item>
+       </ion-checkbox>
+        </ion-list>
+    </ion-content>
+</ion-view>

@@ -177,6 +177,22 @@ angular.module('app.routes', []).config(function($stateProvider, $urlRouterProvi
         url: '/findBrandsS',
         templateUrl: 'templates/findBrandsS.html',
         controller: 'findBrandsCtrl'
+    }).state('findCategoriesP', {
+        url: '/findCategoriesP',
+        templateUrl: 'templates/findCategoriesP.html',
+        controller: 'findCategoriesPCtrl'
+    }).state('findBrandsP', {
+        url: '/findBrandsP',
+        templateUrl: 'templates/findBrandsP.html',
+        controller: 'findBrandsCtrl'
+    }).state('findCategoriesE', {
+        url: '/findCategoriesE',
+        templateUrl: 'templates/findCategoriesE.html',
+        controller: 'findCategoriesECtrl'
+    }).state('findBrandsE', {
+        url: '/findBrandsE',
+        templateUrl: 'templates/findBrandsE.html',
+        controller: 'findBrandsCtrl'
     }).state('categories', {
         url: '/categories',
         templateUrl: 'templates/categories.html',

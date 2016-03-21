@@ -803,6 +803,26 @@ angular.module('app.controllers', [])
         $state.go("findBrandsS");
     };
 })
+
+.controller('findCategoriesPCtrl', function($scope, $state, DataFactory) {
+    $scope.categories = DataFactory.all();
+    $scope.categoryNumber = {};
+
+    $scope.categorySelection = function(numCategoria) {
+        DataFactory.setCategoryNumber(numCategoria);
+        $state.go("findBrandsP");
+    };
+})
+
+.controller('findCategoriesECtrl', function($scope, $state, DataFactory) {
+    $scope.categories = DataFactory.all();
+    $scope.categoryNumber = {};
+
+    $scope.categorySelection = function(numCategoria) {
+        DataFactory.setCategoryNumber(numCategoria);
+        $state.go("findBrandsE");
+    };
+})
    
 .controller('findBrandsCtrl', function($scope, $state, DataFactory, GetMarksFactory) {
     $scope.categories = DataFactory.all();

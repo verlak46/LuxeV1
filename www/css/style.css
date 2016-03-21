@@ -124,12 +124,12 @@
 
 .popover-menu {
     height: 505px;
-    background-color: #222 !important;
+    /*background-color: #222 !important;
     opacity: 0.9 !important;
     /*width: 160px;*/
 }
 
-.popover-arrow::after {
+/*.popover-arrow::after {
     background-color: #222 !important;
     opacity: 0.9;
 }
@@ -138,7 +138,7 @@
   background-color: transparent !important;
   color: #fff !important;
   border-color: #444 !important;
-}
+}*/
 
 .ionic_ratings .icon {
   font-size: 27px;
