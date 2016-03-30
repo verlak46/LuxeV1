@@ -22,6 +22,9 @@ $dark:                            #444 !default;
 .bar.bar-stable .title {
   color: #E6DC9E !important; }
 
+.bar.bar-dark .title {
+  color: #E6DC9E !important; }
+
 .button-dark {
   color: #E6DC9E !important; }
 
