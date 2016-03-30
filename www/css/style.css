@@ -168,14 +168,40 @@ ion-drawer-vertical-handle {
     color: #9A9898;
 }
 
-/*.ion-shop:before {
-content: url('../img/store.png') !important; 
-opacity: 0.4;
+.ion-shop:before {
+    content: url('../img/store.png') !important; 
+    color: #E6DC9E !important;
 }
 
 .active .ion-shop {
     content: url('../img/store.png') !important;
-}*/
+    color: #E6DC9E !important;
+}
+
+.ion-navicon:before {
+    color: #E6DC9E !important;
+}
+
+.active .ion-navicon {
+    color: #E6DC9E !important;
+}
+
+.ion-ios-arrow-back:before {
+    color: #E6DC9E !important;
+}
+
+.active .ion-ios-arrow-back{
+    color: #E6DC9E !important;
+}
+
+.ion-search:before {
+    color: #E6DC9E !important;
+}
+
+.active .ion-search{
+    color: #E6DC9E !important;
+}
+
 
 /*.hermes-slide {
     padding-top: 10px !important;

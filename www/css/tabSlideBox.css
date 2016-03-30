@@ -86,14 +86,19 @@
 	text-decoration: none;
 	margin: 0 18px;
 	border-bottom: 3px solid transparent;
+    color: #E6DC9E;
+    opacity: 0.3;
 }
 .tabbed-slidebox .tsb-icons .scroll a.active {
 	font-size: 0.9em;
-	border-bottom: 3px solid #ccc;
+	color: #E6DC9E;
+    border-bottom: 3px solid #E6DC9E;
+    opacity: 1;
 }
 
 .tabbed-slidebox .tsb-icons .scroll a i{
     font-size: 2.9em;
+    
 }
 .tabbed-slidebox .tsb-icons .scroll a.active i{
     font-size: 3.0em;

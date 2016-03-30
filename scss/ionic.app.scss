@@ -15,12 +15,18 @@ $royal:                           #886aea !default;
 $dark:                            #444 !default;
 */
 
-$stable:                          #E6DC9E !default;
+$stable:                          #C3C3C3 !default;
+$energized: 					  #E6DC9E !default;
 
 .bar.bar-stable {
 	background-image: url("../img/bg2.jpg") !important;
 	background-size:contain;
 }
+
+.bar.bar-stable .title {
+	color: #E6DC9E !important;
+}
+
 
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../lib/ionic/fonts" !default;

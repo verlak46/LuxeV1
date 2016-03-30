@@ -60,11 +60,11 @@
             <ion-nav-view name="Publisher">
                 <ion-content>
                     <div class="list card">
-                        <div class="item item-divider" style="text-align:center">
+                        <div class="item item-divider item-stable" style="text-align:center">
                             <i class="ion-images"></i> Picture
                         </div>
                         <a class="item item-list-detail" ng-click="openModal(1)" style="height:150px; text-align:center">
-                            <div class="bar bar-footer bar-stable" ng-show="imgURI === undefined">
+                            <div class="bar bar-footer bar-dark" ng-show="imgURI === undefined">
                                 <div class="title">Add picture</div>
                             </div>
                             <img ng-show="imgURI !== undefined" ng-src="{{imgURI}}" style="height:130px; padding: 5px 5px 5px 5px;">
