@@ -16,7 +16,7 @@ angular.module('app.controllers', [])
 	      { text: 'Cancel' },
 	      {
 	        text: '<b>Save</b>',
-	        type: 'button-stable',
+	        type: 'button-dark',
 	        onTap: function(e) {
 	          if (!$scope.data.wifi) {
 	            //don't allow the user to close unless he enters data
@@ -40,7 +40,7 @@ angular.module('app.controllers', [])
 	   var alertPopup = $ionicPopup.alert({
 	     title: 'Email Sent!',
 	     template: 'Please check your email',
-	     okType: 'button-stable'
+	     okType: 'button-dark'
 	   });
 
 	   alertPopup.then(function(res) {
@@ -341,7 +341,7 @@ angular.module('app.controllers', [])
 
                 {
                     text: '<b>Close</b>',
-                    type: 'button-stable',
+                    type: 'button-dark',
                     onTap: function(e) {
 
                     }
@@ -360,7 +360,7 @@ angular.module('app.controllers', [])
 
                 {
                     text: '<b>Close</b>',
-                    type: 'button-stable',
+                    type: 'button-dark',
                     onTap: function(e) {
 
                     }
@@ -551,7 +551,7 @@ angular.module('app.controllers', [])
 
                 {
                     text: '<b>Close</b>',
-                    type: 'button-stable',
+                    type: 'button-dark',
                     onTap: function(e) {
 
                     }

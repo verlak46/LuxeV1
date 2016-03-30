@@ -22,6 +22,12 @@ $dark:                            #444 !default;
 .bar.bar-stable .title {
   color: #E6DC9E !important; }
 
+.button-dark {
+  color: #E6DC9E !important; }
+
+.item-dark {
+  color: #E6DC9E !important; }
+
 /*!
   Ionicons, v2.0.1
   Created by Ben Sperry for the Ionic Framework, http://ionicons.com/
